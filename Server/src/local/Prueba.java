@@ -66,10 +66,6 @@ public class Prueba {
 			System.out.println(lector.getMensaje());
 			return false;
 		}
-<<<<<<< HEAD
-				
-=======
->>>>>>> 3c7c04d4a18d79f5c0bb997dfcdee31cb259f49d
 		
 		huella = lector.getMapeador().getLector().getSubject();
 		//huellaBytes = huella.getTemplateBuffer().toByteArray();
@@ -99,18 +95,17 @@ public class Prueba {
 //			System.out.println("TEST NO APROBADO");
 		
 		// Operacion Guardar
-<<<<<<< HEAD
 //		p.huellaEntrada = "/home/usuario/Escritorio/huellas/aniz_marcelo";
-=======
+
 //		p.huellaEntrada = "/home/cajero/Desktop/huellas/aniz_marcelo";
->>>>>>> 3c7c04d4a18d79f5c0bb997dfcdee31cb259f49d
+
 //		p.nombreHuella = "fulano";
 //		
 //		if(p.testGuardar())
 //			System.out.println("TEST APROBADO");
 //		else
 //			System.out.println("TEST NO APROBADO");
-<<<<<<< HEAD
+
 //		
 		
 		// Operacion Identificar
@@ -120,9 +115,7 @@ public class Prueba {
 			System.out.println("TEST APROBADO");
 		else
 			System.out.println("TEST NO APROBADO");
-=======
-		
-		
+
 		// Operacion Identificar
 //		p.huellaEntrada = "/home/cajero/Desktop/huellas/ande_marcelo";
 //		
@@ -130,7 +123,7 @@ public class Prueba {
 //			System.out.println("TEST APROBADO");
 //		else
 //			System.out.println("TEST NO APROBADO");
->>>>>>> 3c7c04d4a18d79f5c0bb997dfcdee31cb259f49d
+
 	
 	
 		System.out.println("**********************************");

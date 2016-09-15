@@ -106,10 +106,7 @@ public class Mapeador{
 				identifyFinger.setSubjectIdentify(subjectIdentify);
 				
 				if( this.lector.getSubject() != null ) {
-<<<<<<< HEAD
 					//System.out.println("No es null el sujeto...");
-=======
->>>>>>> 3c7c04d4a18d79f5c0bb997dfcdee31cb259f49d
 					identifyFinger.setSubject(this.lector.getSubject());
 					identifyFinger.identify();
 				}

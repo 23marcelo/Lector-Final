@@ -66,12 +66,9 @@ public final class IdentifyFinger {
 		this.posicion = posicion;
 	}
 
-<<<<<<< HEAD
-	public void identify() throws Throwable{		
-=======
 	public void identify() throws Throwable{
 		
->>>>>>> 3c7c04d4a18d79f5c0bb997dfcdee31cb259f49d
+
 		NBiometricClient biometricClient = null;
 		NBiometricTask enrollTask = null;
 		
@@ -82,12 +79,7 @@ public final class IdentifyFinger {
 		for (int i = 0; i < names.size(); i++) {
 			enrollTask.getSubjects().add(createSubject(path.concat(names.get(i)), String.format("%d", i)));
 		}
-<<<<<<< HEAD
-		
-		
-=======
 
->>>>>>> 3c7c04d4a18d79f5c0bb997dfcdee31cb259f49d
 		biometricClient.performTask(enrollTask);
 		NBiometricStatus status = enrollTask.getStatus();
 
@@ -107,11 +99,6 @@ public final class IdentifyFinger {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-<<<<<<< HEAD
-		
-		
-=======
->>>>>>> 3c7c04d4a18d79f5c0bb997dfcdee31cb259f49d
 
 		if (status == NBiometricStatus.OK) {
 			for (NMatchingResult matchingResult : subject.getMatchingResults()) {
@@ -144,17 +131,9 @@ public final class IdentifyFinger {
 	}
 
 	private static NSubject createSubject(String fileName, String subjectId) throws IOException {
-		NSubject subject = new NSubject();
-<<<<<<< HEAD
-		
+		NSubject subject = new NSubject();	
 		subject.setTemplateBuffer(NFile.readAllBytes(fileName));
-		subject.setId(subjectId);
-		
-		
-=======
-		subject.setTemplateBuffer(NFile.readAllBytes(fileName));
-		subject.setId(subjectId);
->>>>>>> 3c7c04d4a18d79f5c0bb997dfcdee31cb259f49d
+		subject.setId(subjectId);	
 
 		return subject;
 	}

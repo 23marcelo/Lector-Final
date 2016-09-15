@@ -129,10 +129,7 @@ public class InterfazServer{
 	public int leerArchivo(String path){
 		
 		// Se define la ruta de donde se leera la huella
-<<<<<<< HEAD
 		mapeador = new Mapeador();
-=======
->>>>>>> 3c7c04d4a18d79f5c0bb997dfcdee31cb259f49d
 		mapeador.setPathRead(path);
 		
 		if (mapeador.manejador("leerArchivo")){
@@ -192,11 +189,6 @@ public class InterfazServer{
 
 		mapeador.manejador("identificar");
 		aux = mapeador.getIdentifyFinger().getPosicion();
-		
-<<<<<<< HEAD
-		
-=======
->>>>>>> 3c7c04d4a18d79f5c0bb997dfcdee31cb259f49d
 		// Setea el valor, no se leyo aun desde el lector
 		//this.instancia.identifyFinger.posicion = -1;
 		return aux;
@@ -208,11 +200,7 @@ public class InterfazServer{
 	    Properties propiedades = new Properties();
 	    InputStream entrada = null;
 	    try {
-<<<<<<< HEAD
 	        entrada = new FileInputStream("configuracion.properties");
-=======
-	        entrada = new FileInputStream("/configuracion.properties");
->>>>>>> 3c7c04d4a18d79f5c0bb997dfcdee31cb259f49d
 
 	        // cargamos el archivo de propiedades
 	        propiedades.load(entrada);
