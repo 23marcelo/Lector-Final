@@ -16,6 +16,7 @@ CONFIGURACIONES
 	4.5- Puede verificar la existencia de la variable abriendo la terminal y ejecutando el comando: export
 
 5- Antes de ejecutar la aplicacion recuerde correr el ejecutable "pgd", el mismo se encuentra en la carpeta "Activacion", este ejecutable es el que finalmente provee la/s licencia/s a la aplicacion.
+<<<<<<< HEAD
 
 
 
@@ -32,3 +33,5 @@ No se consiguio crear una variable de sistema permanente en el sistema operativo
 source /etc/profile.d/biometria.sh
 
 
+=======
+>>>>>>> 3c7c04d4a18d79f5c0bb997dfcdee31cb259f49d

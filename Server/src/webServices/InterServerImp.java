@@ -164,7 +164,11 @@ public class InterServerImp implements InterServer {
 			
 			// Se cargan los nombres en la lista "listaHuellas"
 			for (int x = 0; x < ficheros.length; x++) {
+<<<<<<< HEAD
 				 //System.out.println(ficheros[x].getName());				
+=======
+				// System.out.println(ficheros[x].getName());				
+>>>>>>> 3c7c04d4a18d79f5c0bb997dfcdee31cb259f49d
 				listaHuellas.add(ficheros[x].getName());
 			}
 		}
@@ -318,7 +322,11 @@ public class InterServerImp implements InterServer {
 			 }
 		 }
 		 
+<<<<<<< HEAD
 		 //System.out.println("\nRegistro en variable Mensaje: \n"+servidor.getMensaje());
+=======
+		 System.out.println("\nRegistro en variable Mensaje: \n"+servidor.getMensaje());
+>>>>>>> 3c7c04d4a18d79f5c0bb997dfcdee31cb259f49d
 		 		
 		 
 		 //InterServer seri = servidor; 

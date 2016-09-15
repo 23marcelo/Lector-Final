@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="lib/commons-io.jar"/>
+	<classpathentry kind="lib" path="lib/jna.jar"/>
+	<classpathentry kind="lib" path="lib/neurotec-biometrics-client.jar"/>
+	<classpathentry kind="lib" path="lib/neurotec-biometrics.jar"/>
+	<classpathentry kind="lib" path="lib/neurotec-core.jar"/>
+	<classpathentry kind="lib" path="lib/neurotec-devices-virtual.jar"/>
+	<classpathentry kind="lib" path="lib/neurotec-devices.jar"/>
+	<classpathentry kind="lib" path="lib/neurotec-licensing.jar"/>
+	<classpathentry kind="lib" path="lib/neurotec-media-processing.jar"/>
+	<classpathentry kind="lib" path="lib/neurotec-media.jar"/>
+	<classpathentry kind="lib" path="lib/neurotec-native-macosx-universal.jar"/>
+	<classpathentry kind="lib" path="lib/samples-utils.jar"/>
+	<classpathentry kind="lib" path="lib/simple-xml.jar"/>
+	<classpathentry kind="lib" path="lib/stax-api.jar"/>
+	<classpathentry kind="lib" path="lib/stax.jar"/>
+	<classpathentry kind="lib" path="lib/xpp3.jar"/>
+	<classpathentry kind="lib" path="/home/cajero/workspace/Client/lib/Client-Side.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
