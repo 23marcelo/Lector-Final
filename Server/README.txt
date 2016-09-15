@@ -17,19 +17,24 @@ CONFIGURACIONES
 
 5- Antes de ejecutar la aplicacion recuerde correr el ejecutable "pgd", el mismo se encuentra en la carpeta "Activacion", este ejecutable es el que finalmente provee la/s licencia/s a la aplicacion.
 
+6- Para finalmente publicar el servicio web se debe correr la clase "InterServerImp.java" del paquete "webServices".
 
 
 
 
-Observaciones
+
+
+OBSERVACIONES
 
 Paso 3:
 La ruta debe ser como sigue (NO OLVIDE LA BARRA FINAL):
 directorio=/home/usuario/Escritorio/huellas/
 
-Paso 4:
-No se consiguio crear una variable de sistema permanente en el sistema operativo de linux mint, por eso antes de ejecutar el servidor por consola, se debe ejecutar el comando:
-source /etc/profile.d/biometria.sh
+Paso 6:
+Asegurese que la variable de entorno creada en el punto 4, es accesible desde la consola que ejecutara el servidor. Si no se muestra la variable creada (mediante el comando export), antes de levantar el servidor, siempre ejecute el siguiente comando:
+	source /etc/profile.d/biometria.sh   (ver paso 4.4)
+
+
 
 
 
