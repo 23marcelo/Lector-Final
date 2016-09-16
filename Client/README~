@@ -1,0 +1,15 @@
+Para instalar el driver del lector es necesario instalar paquetes adicionales
+- El compilador gcc
+- Kernel-sources?
+
+
+CONFIGURACIONES
+1- El sh wsimport debe ser modificado para que se conecte al servidor correctamente
+	- La ruta del archivo wsimport
+	- direccion servidor
+	- nombre del servicio
+2- La ubicacion del archivo de configuracion para el servidor esta definido en el codigo, (actualmente en "/")
+3- En el archivo de configuracion se define el directorio para almacenar las huellas, ruta valida
+4- Se debe definir la variable de entorno LD_LIBRARY, esta variable tiene como valor la ruta a los archivos "*.so", los mismos se encuentran en la carpeta "libHuellas", sino no se hace esto la aplicacion arroja la excepcion JNCore...
+5- La aplicacion funciona con la Version de java 1.7, los archivos del jar se compilaron con esa version.
+6- Si esta ejecutando la aplicacion en modo trial recuerde correr el ejecutable "pgd", el mismo se encuentra en la carpeta "Activacion"

@@ -1,0 +1,675 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0xb2d9b4e0, pid=3821, tid=3029638000
+#
+# JRE version: Java(TM) SE Runtime Environment (7.0_80-b15) (build 1.7.0_80-b15)
+# Java VM: Java HotSpot(TM) Client VM (24.80-b11 mixed mode, sharing linux-x86 )
+# Problematic frame:
+# C  [libdpfpdd.so+0x34e0]  _init+0x23dc
+#
+# Core dump written. Default location: /home/cajero/workspace/Client/core or core.3821 (max size 1 kB). To ensure a full core dump, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x08071400):  VMThread [stack: 0xb48c9000,0xb494a000] [id=3827]
+
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=1 (SEGV_MAPERR), si_addr=0x4b837ad4
+
+Registers:
+EAX=0xb2da0ba0, EBX=0xb2da0d3c, ECX=0x08445944, EDX=0x4b837a60
+ESP=0xb49489a0, EBP=0xb49489f8, ESI=0x4b837ad4, EDI=0x08445a54
+EIP=0xb2d9b4e0, EFLAGS=0x00010206, CR2=0x4b837ad4
+
+Top of Stack: (sp=0xb49489a0)
+0xb49489a0:   08445a54 b2d9f889 00000000 b42b3598
+0xb49489b0:   00000000 b49489cc b49489dc 4b837a60
+0xb49489c0:   08449998 b7792010 0000018c b42b3598
+0xb49489d0:   08449998 b4948abc b4948a08 00000000
+0xb49489e0:   b4949b70 00000000 b2d9f889 b2da0d3c
+0xb49489f0:   b2dd3320 b4948abc b4948a08 b2d9d180
+0xb4948a00:   b2da0e34 b2dd3194 b4948a38 b2dcfe63
+0xb4948a10:   00000000 b2dd3344 00000000 b4948a28 
+
+Instructions: (pc=0xb2d9b4e0)
+0xb2d9b4c0:   c4 0f 84 93 01 00 00 8b 93 d4 ff ff ff 81 6d c4
+0xb2d9b4d0:   84 00 00 00 8b 75 c4 8d 42 08 8b 55 c4 83 c6 74
+0xb2d9b4e0:   89 42 74 8b 46 04 85 c0 74 08 89 04 24 e8 aa de
+0xb2d9b4f0:   ff ff 8b 93 e8 ff ff ff c7 46 04 00 00 00 00 c7 
+
+Register to memory mapping:
+
+EAX=
+[error occurred during error reporting (printing register info), id 0xb]
+
+Stack: [0xb48c9000,0xb494a000],  sp=0xb49489a0,  free space=510k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libdpfpdd.so+0x34e0]  _init+0x23dc
+C  [libdpfpdd.so+0x5180]  dpfpdd_exit+0x20
+C  [NdmDigitalPersonaUareU.so+0x1e63]  abort@@GLIBC_2.0+0x1e63
+C  [NdmDigitalPersonaUareU.so+0x21f5]  abort@@GLIBC_2.0+0x21f5
+C  [libNCore.so+0x14af0b]  NPluginGetState+0x1cab
+C  [libNCore.so+0x14babc]  NPluginEnable+0x54c
+C  [libNCore.so+0x14c454]  NPluginEnable+0xee4
+C  [libNCore.so+0x14c54a]  NPluginUnplug+0xda
+C  [NdmDigitalPersonaUareU.so+0x401e]  abort@@GLIBC_2.0+0x401e
+C  [libNCore.so+0x75bd6]  NModuleUnregister+0x116
+C  [NdmDigitalPersonaUareU.so+0x4641]  NdmDigitalPersonaUareUModuleOf+0x411
+C  [NdmDigitalPersonaUareU.so+0x18b8]  abort@@GLIBC_2.0+0x18b8
+C  [NdmDigitalPersonaUareU.so+0x4810]  NdmDigitalPersonaUareUModuleOf+0x5e0
+C  [ld-linux.so.2+0xfeeb]  _dl_fini+0x1fb
+C  [libc.so.6+0x2dc51]  __run_exit_handlers+0xc1
+C  [libc.so.6+0x2dcaf]  __GI_exit+0x2f
+V  [libjvm.so+0x2ac4d4]  vm_direct_exit(int)+0x24
+V  [libjvm.so+0x51affc]  VM_Exit::doit()+0xac
+V  [libjvm.so+0x51b057]  VM_Operation::evaluate()+0x47
+V  [libjvm.so+0x5190f3]  VMThread::evaluate_operation(VM_Operation*)+0xb3
+V  [libjvm.so+0x519490]  VMThread::loop()+0x1b0
+V  [libjvm.so+0x5198f5]  VMThread::run()+0x85
+V  [libjvm.so+0x40bcf9]  java_start(Thread*)+0x119
+C  [libpthread.so.0+0x6839]  start_thread+0xd9
+
+VM_Operation (0xb009de30): Exit, mode: safepoint, requested by thread 0x080d2c00
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0828d400 JavaThread "Thread-0" [_thread_blocked, id=3914, stack(0xaedad000,0xaedfe000)]
+  0x080d2c00 JavaThread "SIGTERM handler" daemon [_thread_blocked, id=3912, stack(0xb004e000,0xb009f000)]
+  0x082fd800 JavaThread "AWT-XAWT" daemon [_thread_in_native, id=3841, stack(0xb01c9000,0xb021a000)]
+  0x0815d400 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=3840, stack(0xb021a000,0xb026b000)]
+  0x080a5400 JavaThread "Service Thread" daemon [_thread_blocked, id=3832, stack(0xb438d000,0xb43de000)]
+  0x0809ac00 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=3831, stack(0xb43de000,0xb445f000)]
+  0x08074800 JavaThread "Finalizer" daemon [_thread_blocked, id=3829, stack(0xb4827000,0xb4878000)]
+  0x08073000 JavaThread "Reference Handler" daemon [_thread_blocked, id=3828, stack(0xb4878000,0xb48c9000)]
+  0x08051c00 JavaThread "main" [_thread_blocked, id=3823, stack(0xb6b55000,0xb6ba6000)]
+
+Other Threads:
+=>0x08071400 VMThread [stack: 0xb48c9000,0xb494a000] [id=3827]
+
+VM state:at safepoint (shutting down)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x080508a0] Threads_lock - owner thread: 0x08071400
+
+Heap
+ def new generation   total 4672K, used 2219K [0x7f800000, 0x7fd10000, 0x84950000)
+  eden space 4160K,  41% used [0x7f800000, 0x7f9aac48, 0x7fc10000)
+  from space 512K, 100% used [0x7fc10000, 0x7fc90000, 0x7fc90000)
+  to   space 512K,   0% used [0x7fc90000, 0x7fc90000, 0x7fd10000)
+ tenured generation   total 10368K, used 6501K [0x84950000, 0x85370000, 0x8ec00000)
+   the space 10368K,  62% used [0x84950000, 0x84fa97b0, 0x84fa9800, 0x85370000)
+ compacting perm gen  total 12288K, used 7226K [0x8ec00000, 0x8f800000, 0x92c00000)
+   the space 12288K,  58% used [0x8ec00000, 0x8f30e808, 0x8f30ea00, 0x8f800000)
+    ro space 10240K,  48% used [0x92c00000, 0x930d5b48, 0x930d5c00, 0x93600000)
+    rw space 12288K,  57% used [0x93600000, 0x93ce29c8, 0x93ce2a00, 0x94200000)
+
+Card table byte_map: [0xb49c4000,0xb4a6a000] byte_map_base: 0xb45c8000
+
+Polling page: 0xb776f000
+
+Code Cache  [0xb4aea000, 0xb4c72000, 0xb6aea000)
+ total_blobs=778 nmethods=521 adapters=194 free_code_cache=31220Kb largest_free_block=31969536
+
+Compilation events (10 events):
+Event: 14,526 Thread 0x0809ac00  521             java.lang.ThreadLocal$ThreadLocalMap::set (136 bytes)
+Event: 14,527 Thread 0x0809ac00 nmethod 521 0xb4c6bfc8 code [0xb4c6c120, 0xb4c6c444]
+Event: 14,531 Thread 0x0809ac00  522             java.lang.ThreadLocal$ThreadLocalMap::access$100 (7 bytes)
+Event: 14,531 Thread 0x0809ac00 nmethod 522 0xb4c6c9c8 code [0xb4c6cac0, 0xb4c6cb4c]
+Event: 68,531 Thread 0x0809ac00  523             java.lang.ThreadLocal::set (30 bytes)
+Event: 68,531 Thread 0x0809ac00 nmethod 523 0xb4c6cbc8 code [0xb4c6ccf0, 0xb4c6ce00]
+Event: 77,451 Thread 0x0809ac00  524             java.util.concurrent.locks.ReentrantLock::unlock (10 bytes)
+Event: 77,451 Thread 0x0809ac00 nmethod 524 0xb4bd0748 code [0xb4bd0860, 0xb4bd0954]
+Event: 206,535 Thread 0x0809ac00  525             com.sun.jna.Native::updateLastError (15 bytes)
+Event: 206,535 Thread 0x0809ac00 nmethod 525 0xb4bd3088 code [0xb4bd31c0, 0xb4bd3334]
+
+GC Heap History (10 events):
+Event: 1,685 GC heap before
+{Heap before GC invocations=11 (full 0):
+ def new generation   total 4672K, used 4487K [0x7f800000, 0x7fd10000, 0x84950000)
+  eden space 4160K, 100% used [0x7f800000, 0x7fc10000, 0x7fc10000)
+  from space 512K,  63% used [0x7fc90000, 0x7fce1ea0, 0x7fd10000)
+  to   space 512K,   0% used [0x7fc10000, 0x7fc10000, 0x7fc90000)
+ tenured generation   total 10368K, used 4321K [0x84950000, 0x85370000, 0x8ec00000)
+   the space 10368K,  41% used [0x84950000, 0x84d88568, 0x84d88600, 0x85370000)
+ compacting perm gen  total 12288K, used 3286K [0x8ec00000, 0x8f800000, 0x92c00000)
+   the space 12288K,  26% used [0x8ec00000, 0x8ef35920, 0x8ef35a00, 0x8f800000)
+    ro space 10240K,  48% used [0x92c00000, 0x930d5b48, 0x930d5c00, 0x93600000)
+    rw space 12288K,  57% used [0x93600000, 0x93ce29c8, 0x93ce2a00, 0x94200000)
+Event: 1,688 GC heap after
+Heap after GC invocations=12 (full 0):
+ def new generation   total 4672K, used 225K [0x7f800000, 0x7fd10000, 0x84950000)
+  eden space 4160K,   0% used [0x7f800000, 0x7f800000, 0x7fc10000)
+  from space 512K,  43% used [0x7fc10000, 0x7fc48418, 0x7fc90000)
+  to   space 512K,   0% used [0x7fc90000, 0x7fc90000, 0x7fd10000)
+ tenured generation   total 10368K, used 4644K [0x84950000, 0x85370000, 0x8ec00000)
+   the space 10368K,  44% used [0x84950000, 0x84dd9128, 0x84dd9200, 0x85370000)
+ compacting perm gen  total 12288K, used 3286K [0x8ec00000, 0x8f800000, 0x92c00000)
+   the space 12288K,  26% used [0x8ec00000, 0x8ef35920, 0x8ef35a00, 0x8f800000)
+    ro space 10240K,  48% used [0x92c00000, 0x930d5b48, 0x930d5c00, 0x93600000)
+    rw space 12288K,  57% used [0x93600000, 0x93ce29c8, 0x93ce2a00, 0x94200000)
+}
+Event: 1,785 GC heap before
+{Heap before GC invocations=12 (full 0):
+ def new generation   total 4672K, used 4385K [0x7f800000, 0x7fd10000, 0x84950000)
+  eden space 4160K, 100% used [0x7f800000, 0x7fc10000, 0x7fc10000)
+  from space 512K,  43% used [0x7fc10000, 0x7fc48418, 0x7fc90000)
+  to   space 512K,   0% used [0x7fc90000, 0x7fc90000, 0x7fd10000)
+ tenured generation   total 10368K, used 4644K [0x84950000, 0x85370000, 0x8ec00000)
+   the space 10368K,  44% used [0x84950000, 0x84dd9128, 0x84dd9200, 0x85370000)
+ compacting perm gen  total 12288K, used 3410K [0x8ec00000, 0x8f800000, 0x92c00000)
+   the space 12288K,  27% used [0x8ec00000, 0x8ef54830, 0x8ef54a00, 0x8f800000)
+    ro space 10240K,  48% used [0x92c00000, 0x930d5b48, 0x930d5c00, 0x93600000)
+    rw space 12288K,  57% used [0x93600000, 0x93ce29c8, 0x93ce2a00, 0x94200000)
+Event: 1,788 GC heap after
+Heap after GC invocations=13 (full 0):
+ def new generation   total 4672K, used 418K [0x7f800000, 0x7fd10000, 0x84950000)
+  eden space 4160K,   0% used [0x7f800000, 0x7f800000, 0x7fc10000)
+  from space 512K,  81% used [0x7fc90000, 0x7fcf8978, 0x7fd10000)
+  to   space 512K,   0% used [0x7fc10000, 0x7fc10000, 0x7fc90000)
+ tenured generation   total 10368K, used 4644K [0x84950000, 0x85370000, 0x8ec00000)
+   the space 10368K,  44% used [0x84950000, 0x84dd9128, 0x84dd9200, 0x85370000)
+ compacting perm gen  total 12288K, used 3410K [0x8ec00000, 0x8f800000, 0x92c00000)
+   the space 12288K,  27% used [0x8ec00000, 0x8ef54830, 0x8ef54a00, 0x8f800000)
+    ro space 10240K,  48% used [0x92c00000, 0x930d5b48, 0x930d5c00, 0x93600000)
+    rw space 12288K,  57% used [0x93600000, 0x93ce29c8, 0x93ce2a00, 0x94200000)
+}
+Event: 13,916 GC heap before
+{Heap before GC invocations=13 (full 0):
+ def new generation   total 4672K, used 4578K [0x7f800000, 0x7fd10000, 0x84950000)
+  eden space 4160K, 100% used [0x7f800000, 0x7fc10000, 0x7fc10000)
+  from space 512K,  81% used [0x7fc90000, 0x7fcf8978, 0x7fd10000)
+  to   space 512K,   0% used [0x7fc10000, 0x7fc10000, 0x7fc90000)
+ tenured generation   total 10368K, used 4644K [0x84950000, 0x85370000, 0x8ec00000)
+   the space 10368K,  44% used [0x84950000, 0x84dd9128, 0x84dd9200, 0x85370000)
+ compacting perm gen  total 12288K, used 3634K [0x8ec00000, 0x8f800000, 0x92c00000)
+   the space 12288K,  29% used [0x8ec00000, 0x8ef8c8a8, 0x8ef8ca00, 0x8f800000)
+    ro space 10240K,  48% used [0x92c00000, 0x930d5b48, 0x930d5c00, 0x93600000)
+    rw space 12288K,  57% used [0x93600000, 0x93ce29c8, 0x93ce2a00, 0x94200000)
+Event: 13,921 GC heap after
+Heap after GC invocations=14 (full 0):
+ def new generation   total 4672K, used 397K [0x7f800000, 0x7fd10000, 0x84950000)
+  eden space 4160K,   0% used [0x7f800000, 0x7f800000, 0x7fc10000)
+  from space 512K,  77% used [0x7fc10000, 0x7fc73638, 0x7fc90000)
+  to   space 512K,   0% used [0x7fc90000, 0x7fc90000, 0x7fd10000)
+ tenured generation   total 10368K, used 4905K [0x84950000, 0x85370000, 0x8ec00000)
+   the space 10368K,  47% used [0x84950000, 0x84e1a5a8, 0x84e1a600, 0x85370000)
+ compacting perm gen  total 12288K, used 3634K [0x8ec00000, 0x8f800000, 0x92c00000)
+   the space 12288K,  29% used [0x8ec00000, 0x8ef8c8a8, 0x8ef8ca00, 0x8f800000)
+    ro space 10240K,  48% used [0x92c00000, 0x930d5b48, 0x930d5c00, 0x93600000)
+    rw space 12288K,  57% used [0x93600000, 0x93ce29c8, 0x93ce2a00, 0x94200000)
+}
+Event: 14,100 GC heap before
+{Heap before GC invocations=14 (full 0):
+ def new generation   total 4672K, used 4557K [0x7f800000, 0x7fd10000, 0x84950000)
+  eden space 4160K, 100% used [0x7f800000, 0x7fc10000, 0x7fc10000)
+  from space 512K,  77% used [0x7fc10000, 0x7fc73638, 0x7fc90000)
+  to   space 512K,   0% used [0x7fc90000, 0x7fc90000, 0x7fd10000)
+ tenured generation   total 10368K, used 4905K [0x84950000, 0x85370000, 0x8ec00000)
+   the space 10368K,  47% used [0x84950000, 0x84e1a5a8, 0x84e1a600, 0x85370000)
+ compacting perm gen  total 12288K, used 3948K [0x8ec00000, 0x8f800000, 0x92c00000)
+   the space 12288K,  32% used [0x8ec00000, 0x8efdb048, 0x8efdb200, 0x8f800000)
+    ro space 10240K,  48% used [0x92c00000, 0x930d5b48, 0x930d5c00, 0x93600000)
+    rw space 12288K,  57% used [0x93600000, 0x93ce29c8, 0x93ce2a00, 0x94200000)
+Event: 14,108 GC heap after
+Heap after GC invocations=15 (full 0):
+ def new generation   total 4672K, used 512K [0x7f800000, 0x7fd10000, 0x84950000)
+  eden space 4160K,   0% used [0x7f800000, 0x7f800000, 0x7fc10000)
+  from space 512K, 100% used [0x7fc90000, 0x7fd10000, 0x7fd10000)
+  to   space 512K,   0% used [0x7fc10000, 0x7fc10000, 0x7fc90000)
+ tenured generation   total 10368K, used 5686K [0x84950000, 0x85370000, 0x8ec00000)
+   the space 10368K,  54% used [0x84950000, 0x84edda20, 0x84eddc00, 0x85370000)
+ compacting perm gen  total 12288K, used 3948K [0x8ec00000, 0x8f800000, 0x92c00000)
+   the space 12288K,  32% used [0x8ec00000, 0x8efdb048, 0x8efdb200, 0x8f800000)
+    ro space 10240K,  48% used [0x92c00000, 0x930d5b48, 0x930d5c00, 0x93600000)
+    rw space 12288K,  57% used [0x93600000, 0x93ce29c8, 0x93ce2a00, 0x94200000)
+}
+Event: 14,444 GC heap before
+{Heap before GC invocations=15 (full 0):
+ def new generation   total 4672K, used 4672K [0x7f800000, 0x7fd10000, 0x84950000)
+  eden space 4160K, 100% used [0x7f800000, 0x7fc10000, 0x7fc10000)
+  from space 512K, 100% used [0x7fc90000, 0x7fd10000, 0x7fd10000)
+  to   space 512K,   0% used [0x7fc10000, 0x7fc10000, 0x7fc90000)
+ tenured generation   total 10368K, used 5686K [0x84950000, 0x85370000, 0x8ec00000)
+   the space 10368K,  54% used [0x84950000, 0x84edda20, 0x84eddc00, 0x85370000)
+ compacting perm gen  total 12288K, used 6785K [0x8ec00000, 0x8f800000, 0x92c00000)
+   the space 12288K,  55% used [0x8ec00000, 0x8f2a06a8, 0x8f2a0800, 0x8f800000)
+    ro space 10240K,  48% used [0x92c00000, 0x930d5b48, 0x930d5c00, 0x93600000)
+    rw space 12288K,  57% used [0x93600000, 0x93ce29c8, 0x93ce2a00, 0x94200000)
+Event: 14,453 GC heap after
+Heap after GC invocations=16 (full 0):
+ def new generation   total 4672K, used 512K [0x7f800000, 0x7fd10000, 0x84950000)
+  eden space 4160K,   0% used [0x7f800000, 0x7f800000, 0x7fc10000)
+  from space 512K, 100% used [0x7fc10000, 0x7fc90000, 0x7fc90000)
+  to   space 512K,   0% used [0x7fc90000, 0x7fc90000, 0x7fd10000)
+ tenured generation   total 10368K, used 6501K [0x84950000, 0x85370000, 0x8ec00000)
+   the space 10368K,  62% used [0x84950000, 0x84fa97b0, 0x84fa9800, 0x85370000)
+ compacting perm gen  total 12288K, used 6785K [0x8ec00000, 0x8f800000, 0x92c00000)
+   the space 12288K,  55% used [0x8ec00000, 0x8f2a06a8, 0x8f2a0800, 0x8f800000)
+    ro space 10240K,  48% used [0x92c00000, 0x930d5b48, 0x930d5c00, 0x93600000)
+    rw space 12288K,  57% used [0x93600000, 0x93ce29c8, 0x93ce2a00, 0x94200000)
+}
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 14,517 Thread 0x08051c00 Threw 0x7f928e88 at /HUDSON/workspace/7u-2-build-linux-i586/jdk7u80/2329/hotspot/src/share/vm/prims/jvm.cpp:1319
+Event: 14,518 Thread 0x08051c00 Threw 0x7f92cf78 at /HUDSON/workspace/7u-2-build-linux-i586/jdk7u80/2329/hotspot/src/share/vm/prims/jvm.cpp:1319
+Event: 14,519 Thread 0x08051c00 Threw 0x7f930ad8 at /HUDSON/workspace/7u-2-build-linux-i586/jdk7u80/2329/hotspot/src/share/vm/prims/jvm.cpp:1319
+Event: 14,522 Thread 0x08051c00 Threw 0x7f9347f0 at /HUDSON/workspace/7u-2-build-linux-i586/jdk7u80/2329/hotspot/src/share/vm/prims/jvm.cpp:1319
+Event: 14,523 Thread 0x08051c00 Threw 0x7f938448 at /HUDSON/workspace/7u-2-build-linux-i586/jdk7u80/2329/hotspot/src/share/vm/prims/jvm.cpp:1319
+Event: 14,523 Thread 0x08051c00 Threw 0x7f93cbf8 at /HUDSON/workspace/7u-2-build-linux-i586/jdk7u80/2329/hotspot/src/share/vm/prims/jvm.cpp:1319
+Event: 14,524 Thread 0x08051c00 Threw 0x7f941248 at /HUDSON/workspace/7u-2-build-linux-i586/jdk7u80/2329/hotspot/src/share/vm/prims/jvm.cpp:1319
+Event: 14,525 Thread 0x08051c00 Threw 0x7f947810 at /HUDSON/workspace/7u-2-build-linux-i586/jdk7u80/2329/hotspot/src/share/vm/prims/jvm.cpp:1319
+Event: 14,525 Thread 0x08051c00 Threw 0x7f94b9a8 at /HUDSON/workspace/7u-2-build-linux-i586/jdk7u80/2329/hotspot/src/share/vm/prims/jvm.cpp:1319
+Event: 14,527 Thread 0x08051c00 Threw 0x7f950398 at /HUDSON/workspace/7u-2-build-linux-i586/jdk7u80/2329/hotspot/src/share/vm/prims/jvm.cpp:1319
+
+Events (10 events):
+Event: 265,183 Executing VM operation: RevokeBias done
+Event: 265,184 Executing VM operation: RevokeBias
+Event: 265,184 Executing VM operation: RevokeBias done
+Event: 265,184 Executing VM operation: RevokeBias
+Event: 265,184 Executing VM operation: RevokeBias done
+Event: 265,184 Thread 0x0828cc00 Thread exited: 0x0828cc00
+Event: 265,184 Executing VM operation: RevokeBias
+Event: 265,184 Executing VM operation: RevokeBias done
+Event: 265,185 Thread 0x08099000 Thread exited: 0x08099000
+Event: 265,185 Executing VM operation: Exit
+
+
+Dynamic libraries:
+08048000-08049000 r-xp 00000000 08:04 2394621    /usr/java/jdk1.7.0_80/bin/java
+08049000-0804a000 rw-p 00000000 08:04 2394621    /usr/java/jdk1.7.0_80/bin/java
+0804a000-0857d000 rw-p 00000000 00:00 0          [heap]
+7f800000-7fd10000 rw-p 00000000 00:00 0 
+7fd10000-84950000 rw-p 00000000 00:00 0 
+84950000-85370000 rw-p 00000000 00:00 0 
+85370000-8ec00000 rw-p 00000000 00:00 0 
+8ec00000-8f800000 rw-p 00000000 00:00 0 
+8f800000-92c00000 rw-p 00000000 00:00 0 
+92c00000-930d6000 r--p 00001000 08:04 287204     /usr/java/jdk1.7.0_80/jre/lib/i386/client/classes.jsa
+930d6000-93600000 rw-p 00000000 00:00 0 
+93600000-93ce3000 rw-p 004d7000 08:04 287204     /usr/java/jdk1.7.0_80/jre/lib/i386/client/classes.jsa
+93ce3000-94200000 rw-p 00000000 00:00 0 
+94200000-944b5000 rw-p 00bba000 08:04 287204     /usr/java/jdk1.7.0_80/jre/lib/i386/client/classes.jsa
+944b5000-94600000 rw-p 00000000 00:00 0 
+94600000-94609000 r-xp 00e6f000 08:04 287204     /usr/java/jdk1.7.0_80/jre/lib/i386/client/classes.jsa
+94609000-94a00000 rw-p 00000000 00:00 0 
+aecc3000-aedad000 rw-p 00000000 00:00 0 
+aedad000-aedb0000 ---p 00000000 00:00 0 
+aedb0000-aedfe000 rw-p 00000000 00:00 0 
+aedfe000-aedff000 ---p 00000000 00:00 0 
+aedff000-af5ff000 rw-p 00000000 00:00 0 
+af5ff000-af600000 ---p 00000000 00:00 0 
+af600000-afe00000 rw-p 00000000 00:00 0 
+afe00000-afe21000 rw-p 00000000 00:00 0 
+afe21000-aff00000 ---p 00000000 00:00 0 
+aff33000-aff36000 ---p 00000000 00:00 0 
+aff36000-aff84000 rw-p 00000000 00:00 0 
+aff84000-affc4000 r--s 00000000 08:04 2228955    /var/cache/fontconfig/17090aa38d5c6f09fb8c5c354938f1d7-x86.cache-2
+affc4000-affe6000 r--s 00000000 08:04 2228962    /var/cache/fontconfig/8d4af663993b81a124ee82e610bb31f9-x86.cache-2
+affe6000-b0026000 r--s 00000000 08:04 2228954    /var/cache/fontconfig/df311e82a1a24c41a75c2c930223552e-x86.cache-2
+b004e000-b0051000 ---p 00000000 00:00 0 
+b0051000-b009f000 rw-p 00000000 00:00 0 
+b009f000-b00a3000 r--s 000f7000 08:04 287193     /usr/java/jdk1.7.0_80/jre/lib/ext/localedata.jar
+b00a3000-b00af000 r--s 000af000 08:04 287419     /usr/java/jdk1.7.0_80/jre/lib/resources.jar
+b00af000-b010f000 r-xp 00000000 08:04 287400     /usr/java/jdk1.7.0_80/jre/lib/i386/libt2k.so
+b010f000-b0113000 rw-p 00060000 08:04 287400     /usr/java/jdk1.7.0_80/jre/lib/i386/libt2k.so
+b0113000-b0117000 rw-p 00000000 00:00 0 
+b0117000-b0132000 r-xp 00000000 08:04 1843825    /lib/libgcc_s.so.1
+b0132000-b0133000 r--p 0001a000 08:04 1843825    /lib/libgcc_s.so.1
+b0133000-b0134000 rw-p 0001b000 08:04 1843825    /lib/libgcc_s.so.1
+b0137000-b0139000 r--s 00015000 08:04 1966236    /home/cajero/workspace/Client/lib/xpp3.jar
+b0139000-b013c000 r--s 00029000 08:04 1966235    /home/cajero/workspace/Client/lib/stax.jar
+b013c000-b0145000 r--s 00051000 08:04 1966233    /home/cajero/workspace/Client/lib/simple-xml.jar
+b0145000-b014c000 r--s 00000000 08:04 2228958    /var/cache/fontconfig/77e41c5059666d75f92e318d4be8c21e-x86.cache-2
+b014c000-b0161000 r--s 00000000 08:04 2228963    /var/cache/fontconfig/7ef2298fde41cc6eeb7af42e48b7d293-x86.cache-2
+b0161000-b01c2000 r-xp 00000000 08:04 287360     /usr/java/jdk1.7.0_80/jre/lib/i386/libfontmanager.so
+b01c2000-b01c5000 rw-p 00060000 08:04 287360     /usr/java/jdk1.7.0_80/jre/lib/i386/libfontmanager.so
+b01c5000-b01c9000 rw-p 00000000 00:00 0 
+b01c9000-b01cc000 ---p 00000000 00:00 0 
+b01cc000-b021a000 rw-p 00000000 00:00 0 
+b021a000-b021d000 ---p 00000000 00:00 0 
+b021d000-b026b000 rw-p 00000000 00:00 0 
+b026b000-b0287000 r-xp 00000000 08:04 2313747    /usr/lib/libxcb.so.1.0.0
+b0287000-b0288000 r--p 0001b000 08:04 2313747    /usr/lib/libxcb.so.1.0.0
+b0288000-b0289000 rw-p 0001c000 08:04 2313747    /usr/lib/libxcb.so.1.0.0
+b0289000-b028a000 r-xp 00000000 08:04 2313737    /usr/lib/libxcb-xlib.so.0.0.0
+b028a000-b028b000 r--p 00000000 08:04 2313737    /usr/lib/libxcb-xlib.so.0.0.0
+b028b000-b028c000 rw-p 00001000 08:04 2313737    /usr/lib/libxcb-xlib.so.0.0.0
+b028c000-b0295000 r-xp 00000000 08:04 1310996    /usr/lib/libXi.so.6.0.0
+b0295000-b0296000 r--p 00008000 08:04 1310996    /usr/lib/libXi.so.6.0.0
+b0296000-b0297000 rw-p 00009000 08:04 1310996    /usr/lib/libXi.so.6.0.0
+b0297000-b029c000 r-xp 00000000 08:04 1311006    /usr/lib/libXtst.so.6.1.0
+b029c000-b029d000 r--p 00004000 08:04 1311006    /usr/lib/libXtst.so.6.1.0
+b029d000-b029e000 rw-p 00005000 08:04 1311006    /usr/lib/libXtst.so.6.1.0
+b029e000-b02a6000 r-xp 00000000 08:04 1310834    /usr/lib/libXrender.so.1.3.0
+b02a6000-b02a7000 r--p 00007000 08:04 1310834    /usr/lib/libXrender.so.1.3.0
+b02a7000-b02a8000 rw-p 00008000 08:04 1310834    /usr/lib/libXrender.so.1.3.0
+b02a8000-b03d7000 r-xp 00000000 08:04 1310767    /usr/lib/libX11.so.6.2.0
+b03d7000-b03d8000 r--p 0012f000 08:04 1310767    /usr/lib/libX11.so.6.2.0
+b03d8000-b03db000 rw-p 00130000 08:04 1310767    /usr/lib/libX11.so.6.2.0
+b03dc000-b03dd000 r--s 00002000 08:04 1966272    /home/cajero/workspace/Client/lib/Client-Side.jar
+b03dd000-b03df000 r--s 00005000 08:04 1966234    /home/cajero/workspace/Client/lib/stax-api.jar
+b03df000-b03e4000 r--s 00000000 08:04 2228957    /var/cache/fontconfig/d62e99ef547d1d24cdb1bd22ec1a2976-x86.cache-2
+b03e4000-b03f2000 r-xp 00000000 08:04 287392     /usr/java/jdk1.7.0_80/jre/lib/i386/libnio.so
+b03f2000-b03f3000 rw-p 0000e000 08:04 287392     /usr/java/jdk1.7.0_80/jre/lib/i386/libnio.so
+b03f3000-b03f7000 r-xp 00000000 08:04 1310836    /usr/lib/libXfixes.so.3.1.0
+b03f7000-b03f8000 r--p 00003000 08:04 1310836    /usr/lib/libXfixes.so.3.1.0
+b03f8000-b03f9000 rw-p 00004000 08:04 1310836    /usr/lib/libXfixes.so.3.1.0
+b03f9000-b0402000 r-xp 00000000 08:04 1310982    /usr/lib/libXcursor.so.1.0.2
+b0402000-b0403000 r--p 00008000 08:04 1310982    /usr/lib/libXcursor.so.1.0.2
+b0403000-b0404000 rw-p 00009000 08:04 1310982    /usr/lib/libXcursor.so.1.0.2
+b0404000-b0406000 r-xp 00000000 08:04 2435454    /usr/lib/gconv/ISO8859-1.so
+b0406000-b0407000 r--p 00001000 08:04 2435454    /usr/lib/gconv/ISO8859-1.so
+b0407000-b0408000 rw-p 00002000 08:04 2435454    /usr/lib/gconv/ISO8859-1.so
+b0408000-b0451000 r-xp 00000000 08:04 295557     /usr/java/jdk1.7.0_80/jre/lib/i386/xawt/libmawt.so
+b0451000-b0453000 rw-p 00049000 08:04 295557     /usr/java/jdk1.7.0_80/jre/lib/i386/xawt/libmawt.so
+b0453000-b0454000 rw-p 00000000 00:00 0 
+b0454000-b04da000 r-xp 00000000 08:04 287356     /usr/java/jdk1.7.0_80/jre/lib/i386/libawt.so
+b04da000-b04e1000 rw-p 00086000 08:04 287356     /usr/java/jdk1.7.0_80/jre/lib/i386/libawt.so
+b04e1000-b0505000 rw-p 00000000 00:00 0 
+b0505000-b0506000 ---p 00000000 00:00 0 
+b0506000-b0d06000 rw-p 00000000 00:00 0 
+b0d06000-b0d07000 ---p 00000000 00:00 0 
+b0d07000-b1507000 rw-p 00000000 00:00 0 
+b1507000-b1508000 ---p 00000000 00:00 0 
+b1508000-b1d08000 rw-p 00000000 00:00 0 
+b1d08000-b1d09000 ---p 00000000 00:00 0 
+b1d09000-b2509000 rw-p 00000000 00:00 0 
+b2539000-b253a000 ---p 00000000 00:00 0 
+b253a000-b2d3a000 rw-p 00000000 00:00 0 
+b2d3a000-b2d3f000 r-xp 00000000 08:04 174766     /opt/DigitalPersona/urusdk-linux/Linux/lib/x86/libdpDrvDatApi.so.2.0.0.8
+b2d3f000-b2d40000 rw-p 00005000 08:04 174766     /opt/DigitalPersona/urusdk-linux/Linux/lib/x86/libdpDrvDatApi.so.2.0.0.8
+b2d40000-b2d4f000 r-xp 00000000 08:04 174769     /opt/DigitalPersona/urusdk-linux/Linux/lib/x86/libdpFC.so.2.0.0.8
+b2d4f000-b2d50000 rw-p 0000f000 08:04 174769     /opt/DigitalPersona/urusdk-linux/Linux/lib/x86/libdpFC.so.2.0.0.8
+b2d50000-b2d54000 r-xp 00000000 08:04 174793     /opt/DigitalPersona/urusdk-linux/Linux/lib/x86/libdpUsbAda.so.2.0.0.8
+b2d54000-b2d55000 rw-p 00003000 08:04 174793     /opt/DigitalPersona/urusdk-linux/Linux/lib/x86/libdpUsbAda.so.2.0.0.8
+b2d55000-b2d60000 r-xp 00000000 08:04 174784     /opt/DigitalPersona/urusdk-linux/Linux/lib/x86/libdpI00701.so.2.0.0.8
+b2d60000-b2d61000 rw-p 0000a000 08:04 174784     /opt/DigitalPersona/urusdk-linux/Linux/lib/x86/libdpI00701.so.2.0.0.8
+b2d61000-b2d79000 r-xp 00000000 08:04 174757     /opt/DigitalPersona/urusdk-linux/Linux/lib/x86/libdpD00701.so.2.0.0.8
+b2d79000-b2d7a000 rw-p 00018000 08:04 174757     /opt/DigitalPersona/urusdk-linux/Linux/lib/x86/libdpD00701.so.2.0.0.8
+b2d7a000-b2d81000 r-xp 00000000 08:04 174760     /opt/DigitalPersona/urusdk-linux/Linux/lib/x86/libdpDevMgr.so.2.0.0.8
+b2d81000-b2d82000 rw-p 00006000 08:04 174760     /opt/DigitalPersona/urusdk-linux/Linux/lib/x86/libdpDevMgr.so.2.0.0.8
+b2d82000-b2d85000 r-xp 00000000 08:04 174787     /opt/DigitalPersona/urusdk-linux/Linux/lib/x86/libdpObjMgr.so.2.0.0.8
+b2d85000-b2d86000 rw-p 00002000 08:04 174787     /opt/DigitalPersona/urusdk-linux/Linux/lib/x86/libdpObjMgr.so.2.0.0.8
+b2d86000-b2d8c000 r-xp 00000000 08:04 174763     /opt/DigitalPersona/urusdk-linux/Linux/lib/x86/libdpDrvApi.so.2.0.0.8
+b2d8c000-b2d8d000 rw-p 00005000 08:04 174763     /opt/DigitalPersona/urusdk-linux/Linux/lib/x86/libdpDrvApi.so.2.0.0.8
+b2d91000-b2d98000 rw-p 00000000 00:00 0 
+b2d98000-b2da0000 r-xp 00000000 08:04 174775     /opt/DigitalPersona/urusdk-linux/Linux/lib/x86/libdpfpdd.so.2.2.3
+b2da0000-b2da1000 rw-p 00007000 08:04 174775     /opt/DigitalPersona/urusdk-linux/Linux/lib/x86/libdpfpdd.so.2.2.3
+b2da1000-b2da2000 r--s 00007000 08:04 1966232    /home/cajero/workspace/Client/lib/samples-utils.jar
+b2da2000-b2da3000 r--s 009af000 08:04 1966231    /home/cajero/workspace/Client/lib/neurotec-native-macosx-universal.jar
+b2da3000-b2da5000 r-xp 00000000 08:04 2313267    /usr/lib/libXau.so.6.0.0
+b2da5000-b2da6000 r--p 00001000 08:04 2313267    /usr/lib/libXau.so.6.0.0
+b2da6000-b2da7000 rw-p 00002000 08:04 2313267    /usr/lib/libXau.so.6.0.0
+b2da7000-b2db6000 r-xp 00000000 08:04 1310838    /usr/lib/libXext.so.6.4.0
+b2db6000-b2db7000 r--p 0000e000 08:04 1310838    /usr/lib/libXext.so.6.4.0
+b2db7000-b2db8000 rw-p 0000f000 08:04 1310838    /usr/lib/libXext.so.6.4.0
+b2db8000-b2dcd000 r-xp 00000000 08:04 287391     /usr/java/jdk1.7.0_80/jre/lib/i386/libnet.so
+b2dcd000-b2dce000 rw-p 00015000 08:04 287391     /usr/java/jdk1.7.0_80/jre/lib/i386/libnet.so
+b2dce000-b2dd3000 r-xp 00000000 08:04 1966241    /home/cajero/workspace/Client/libHuellas/linux-32 bits/FScanners/NdmDigitalPersonaUareU/NdmDigitalPersonaUareU.so
+b2dd3000-b2dd4000 rw-p 00005000 08:04 1966241    /home/cajero/workspace/Client/libHuellas/linux-32 bits/FScanners/NdmDigitalPersonaUareU/NdmDigitalPersonaUareU.so
+b2dd4000-b2ddf000 r-xp 00000000 08:04 1966243    /home/cajero/workspace/Client/libHuellas/linux-32 bits/NdmMedia.so
+b2ddf000-b2de0000 rw-p 0000a000 08:04 1966243    /home/cajero/workspace/Client/libHuellas/linux-32 bits/NdmMedia.so
+b2de0000-b2df5000 r-xp 00000000 08:04 1966244    /home/cajero/workspace/Client/libHuellas/linux-32 bits/NdmVirtual.so
+b2df5000-b2dfa000 rw-p 00014000 08:04 1966244    /home/cajero/workspace/Client/libHuellas/linux-32 bits/NdmVirtual.so
+b2dfa000-b2dfb000 ---p 00000000 00:00 0 
+b2dfb000-b35fb000 rw-p 00000000 00:00 0 
+b35fb000-b35fd000 rwxp 00000000 00:00 0 
+b35fd000-b362c000 r-xp 00000000 08:04 1966251    /home/cajero/workspace/Client/libHuellas/linux-32 bits/libNLicensing.so
+b362c000-b3637000 rw-p 0002f000 08:04 1966251    /home/cajero/workspace/Client/libHuellas/linux-32 bits/libNLicensing.so
+b3637000-b3638000 rw-p 00000000 00:00 0 
+b3638000-b3795000 r-xp 00000000 08:04 1966245    /home/cajero/workspace/Client/libHuellas/linux-32 bits/libNBiometricClient.so
+b3795000-b379e000 rw-p 0015d000 08:04 1966245    /home/cajero/workspace/Client/libHuellas/linux-32 bits/libNBiometricClient.so
+b379e000-b37c6000 r-xp 00000000 08:04 1966250    /home/cajero/workspace/Client/libHuellas/linux-32 bits/libNDevices.so
+b37c6000-b37d1000 rw-p 00027000 08:04 1966250    /home/cajero/workspace/Client/libHuellas/linux-32 bits/libNDevices.so
+b37d1000-b37d8000 rwxp 00000000 00:00 0 
+b37d8000-b3d56000 r-xp 00000000 08:04 1966246    /home/cajero/workspace/Client/libHuellas/linux-32 bits/libNBiometrics.so
+b3d56000-b3dbf000 rw-p 0057d000 08:04 1966246    /home/cajero/workspace/Client/libHuellas/linux-32 bits/libNBiometrics.so
+b3dbf000-b3dc5000 rw-p 00000000 00:00 0 
+b3dc5000-b3e20000 r-xp 00000000 08:04 1966253    /home/cajero/workspace/Client/libHuellas/linux-32 bits/libNMediaProc.so
+b3e20000-b3e2a000 rw-p 0005a000 08:04 1966253    /home/cajero/workspace/Client/libHuellas/linux-32 bits/libNMediaProc.so
+b3e2a000-b3fe5000 r-xp 00000000 08:04 1966252    /home/cajero/workspace/Client/libHuellas/linux-32 bits/libNMedia.so
+b3fe5000-b3fff000 rw-p 001bb000 08:04 1966252    /home/cajero/workspace/Client/libHuellas/linux-32 bits/libNMedia.so
+b3fff000-b4000000 rw-p 00000000 00:00 0 
+b4000000-b4100000 rw-p 00000000 00:00 0 
+b4100000-b4106000 rwxp 00000000 00:00 0 
+b4106000-b410b000 r--s 00038000 08:04 1966230    /home/cajero/workspace/Client/lib/neurotec-media.jar
+b410b000-b410c000 r--s 00004000 08:04 1966229    /home/cajero/workspace/Client/lib/neurotec-media-processing.jar
+b410c000-b410e000 r--s 0000a000 08:04 1966228    /home/cajero/workspace/Client/lib/neurotec-licensing.jar
+b410e000-b410f000 r--p 00000000 00:00 0 
+b410f000-b4110000 rwxp 00000000 00:00 0 
+b4110000-b412e000 r--p 00000000 08:04 2419102    /usr/share/locale/es/LC_MESSAGES/libc.mo
+b412e000-b42ac000 r-xp 00000000 08:04 1966249    /home/cajero/workspace/Client/libHuellas/linux-32 bits/libNCore.so
+b42ac000-b42bd000 rw-p 0017e000 08:04 1966249    /home/cajero/workspace/Client/libHuellas/linux-32 bits/libNCore.so
+b42bd000-b42bf000 rw-p 00000000 00:00 0 
+b42bf000-b42d3000 r-xp 00000000 08:04 1860823    /tmp/jna-cajero/jna2139723628829008469.tmp (deleted)
+b42d3000-b42d4000 rw-p 00014000 08:04 1860823    /tmp/jna-cajero/jna2139723628829008469.tmp (deleted)
+b42d4000-b42d7000 r--s 00019000 08:04 287406     /usr/java/jdk1.7.0_80/jre/lib/jce.jar
+b42d7000-b42db000 r--s 0008b000 08:04 287420     /usr/java/jdk1.7.0_80/jre/lib/jsse.jar
+b42db000-b42e2000 r--s 0002d000 08:04 1966227    /home/cajero/workspace/Client/lib/neurotec-devices.jar
+b42e2000-b42e4000 r--s 00005000 08:04 1966226    /home/cajero/workspace/Client/lib/neurotec-devices-virtual.jar
+b42e4000-b42f1000 r--s 000a0000 08:04 1966225    /home/cajero/workspace/Client/lib/neurotec-core.jar
+b42f1000-b4303000 r--s 000e3000 08:04 1966224    /home/cajero/workspace/Client/lib/neurotec-biometrics.jar
+b4303000-b4305000 r--s 0000b000 08:04 1966223    /home/cajero/workspace/Client/lib/neurotec-biometrics-client.jar
+b4305000-b4308000 r--s 000a6000 08:04 1966222    /home/cajero/workspace/Client/lib/jna.jar
+b4308000-b430c000 r--s 0002a000 08:04 1966221    /home/cajero/workspace/Client/lib/commons-io.jar
+b430c000-b430d000 ---p 00000000 00:00 0 
+b430d000-b438d000 rw-p 00000000 00:00 0 
+b438d000-b4390000 ---p 00000000 00:00 0 
+b4390000-b43de000 rw-p 00000000 00:00 0 
+b43de000-b43e1000 ---p 00000000 00:00 0 
+b43e1000-b445f000 rw-p 00000000 00:00 0 
+b445f000-b4462000 ---p 00000000 00:00 0 
+b4462000-b44fb000 rw-p 00000000 00:00 0 
+b44fb000-b46bb000 r--s 039fb000 08:04 287422     /usr/java/jdk1.7.0_80/jre/lib/rt.jar
+b46bb000-b46fa000 r--p 00000000 08:04 49629      /usr/lib/locale/es_ES.utf8/LC_CTYPE
+b46fa000-b46fb000 r--p 00000000 08:04 49605      /usr/lib/locale/es_ES.utf8/LC_NUMERIC
+b46fb000-b46fc000 r--p 00000000 08:04 34267      /usr/lib/locale/es_ES.utf8/LC_TIME
+b46fc000-b4819000 r--p 00000000 08:04 49630      /usr/lib/locale/es_ES.utf8/LC_COLLATE
+b4819000-b481a000 r--p 00000000 08:04 49607      /usr/lib/locale/es_ES.utf8/LC_MONETARY
+b481a000-b481b000 r--p 00000000 08:04 42251      /usr/lib/locale/es_ES.utf8/LC_MESSAGES/SYS_LC_MESSAGES
+b481b000-b481c000 r--p 00000000 08:04 49626      /usr/lib/locale/es_ES.utf8/LC_PAPER
+b481c000-b481d000 r--p 00000000 08:04 49606      /usr/lib/locale/es_ES.utf8/LC_NAME
+b481d000-b481e000 r--p 00000000 08:04 34843      /usr/lib/locale/es_ES.utf8/LC_ADDRESS
+b481e000-b481f000 r--p 00000000 08:04 34842      /usr/lib/locale/es_ES.utf8/LC_TELEPHONE
+b481f000-b4820000 r--p 00000000 08:04 49628      /usr/lib/locale/es_ES.utf8/LC_MEASUREMENT
+b4820000-b4827000 r--s 00000000 08:04 2435517    /usr/lib/gconv/gconv-modules.cache
+b4827000-b482a000 ---p 00000000 00:00 0 
+b482a000-b4878000 rw-p 00000000 00:00 0 
+b4878000-b487b000 ---p 00000000 00:00 0 
+b487b000-b48c9000 rw-p 00000000 00:00 0 
+b48c9000-b48ca000 ---p 00000000 00:00 0 
+b48ca000-b4958000 rw-p 00000000 00:00 0 
+b4958000-b4972000 rw-p 00000000 00:00 0 
+b4972000-b4978000 rw-p 00000000 00:00 0 
+b4978000-b49c4000 rw-p 00000000 00:00 0 
+b49c4000-b49c7000 rw-p 00000000 00:00 0 
+b49c7000-b49ec000 rw-p 00000000 00:00 0 
+b49ec000-b49f2000 rw-p 00000000 00:00 0 
+b49f2000-b4a3e000 rw-p 00000000 00:00 0 
+b4a3e000-b4a44000 rw-p 00000000 00:00 0 
+b4a44000-b4a5e000 rw-p 00000000 00:00 0 
+b4a5e000-b4a71000 rw-p 00000000 00:00 0 
+b4a71000-b4aea000 rw-p 00000000 00:00 0 
+b4aea000-b4c72000 rwxp 00000000 00:00 0 
+b4c72000-b6aea000 rw-p 00000000 00:00 0 
+b6aea000-b6af2000 rw-s 00000000 08:04 1860819    /tmp/hsperfdata_cajero/3821 (deleted)
+b6af2000-b6b27000 r--s 00000000 08:04 2229045    /var/run/nscd/passwd
+b6b27000-b6b4a000 r-xp 00000000 08:04 287370     /usr/java/jdk1.7.0_80/jre/lib/i386/libjava.so
+b6b4a000-b6b4b000 rw-p 00023000 08:04 287370     /usr/java/jdk1.7.0_80/jre/lib/i386/libjava.so
+b6b4b000-b6b53000 r-xp 00000000 08:04 1843791    /lib/librt-2.11.3.so
+b6b53000-b6b54000 r--p 00007000 08:04 1843791    /lib/librt-2.11.3.so
+b6b54000-b6b55000 rw-p 00008000 08:04 1843791    /lib/librt-2.11.3.so
+b6b55000-b6b58000 ---p 00000000 00:00 0 
+b6b58000-b6ba6000 rw-p 00000000 00:00 0 
+b6ba6000-b6bcd000 r-xp 00000000 08:04 1843769    /lib/libm-2.11.3.so
+b6bcd000-b6bce000 r--p 00026000 08:04 1843769    /lib/libm-2.11.3.so
+b6bce000-b6bcf000 rw-p 00027000 08:04 1843769    /lib/libm-2.11.3.so
+b6bcf000-b7164000 r-xp 00000000 08:04 287345     /usr/java/jdk1.7.0_80/jre/lib/i386/client/libjvm.so
+b7164000-b7185000 rw-p 00595000 08:04 287345     /usr/java/jdk1.7.0_80/jre/lib/i386/client/libjvm.so
+b7185000-b75a6000 rw-p 00000000 00:00 0 
+b75a6000-b7712000 r-xp 00000000 08:04 1843761    /lib/libc-2.11.3.so
+b7712000-b7713000 ---p 0016c000 08:04 1843761    /lib/libc-2.11.3.so
+b7713000-b7715000 r--p 0016c000 08:04 1843761    /lib/libc-2.11.3.so
+b7715000-b7716000 rw-p 0016e000 08:04 1843761    /lib/libc-2.11.3.so
+b7716000-b771a000 rw-p 00000000 00:00 0 
+b771a000-b771d000 r-xp 00000000 08:04 1843767    /lib/libdl-2.11.3.so
+b771d000-b771e000 r--p 00002000 08:04 1843767    /lib/libdl-2.11.3.so
+b771e000-b771f000 rw-p 00003000 08:04 1843767    /lib/libdl-2.11.3.so
+b771f000-b7733000 r-xp 00000000 08:04 264696     /usr/java/jdk1.7.0_80/lib/i386/jli/libjli.so
+b7733000-b7734000 rw-p 00013000 08:04 264696     /usr/java/jdk1.7.0_80/lib/i386/jli/libjli.so
+b7734000-b774b000 r-xp 00000000 08:04 1843787    /lib/libpthread-2.11.3.so
+b774b000-b774c000 r--p 00016000 08:04 1843787    /lib/libpthread-2.11.3.so
+b774c000-b774d000 rw-p 00017000 08:04 1843787    /lib/libpthread-2.11.3.so
+b774d000-b774f000 rw-p 00000000 00:00 0 
+b774f000-b7750000 r--p 00000000 08:04 34265      /usr/lib/locale/es_ES.utf8/LC_IDENTIFICATION
+b7750000-b7756000 rw-p 00000000 00:00 0 
+b7756000-b776d000 r-xp 00000000 08:04 287403     /usr/java/jdk1.7.0_80/jre/lib/i386/libzip.so
+b776d000-b776e000 rw-p 00016000 08:04 287403     /usr/java/jdk1.7.0_80/jre/lib/i386/libzip.so
+b776e000-b776f000 rw-p 00000000 00:00 0 
+b776f000-b7770000 ---p 00000000 00:00 0 
+b7770000-b777b000 r-xp 00000000 08:04 287402     /usr/java/jdk1.7.0_80/jre/lib/i386/libverify.so
+b777b000-b777c000 rw-p 0000b000 08:04 287402     /usr/java/jdk1.7.0_80/jre/lib/i386/libverify.so
+b777c000-b777d000 rw-p 00000000 00:00 0 
+b777d000-b779c000 r-xp 00000000 08:04 1843754    /lib/ld-2.11.3.so
+b779c000-b779d000 r--p 0001e000 08:04 1843754    /lib/ld-2.11.3.so
+b779d000-b779e000 rw-p 0001f000 08:04 1843754    /lib/ld-2.11.3.so
+bfd00000-bfd01000 rwxp 00000000 00:00 0 
+bfd32000-bfd54000 rw-p 00000000 00:00 0          [stack]
+ffffe000-fffff000 r-xp 00000000 00:00 0          [vdso]
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 
+java_command: webServices.ClienteWS
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+CLASSPATH=:/usr/local/NCRRetail:/usr/local/NCRRetail/jar/NCRRetailCommon.jar:/usr/local/NCRRetail/jar/jpos.jar:/usr/local/NCRRetail/jar/NCRJavaPOS.jar:/usr/local/NCRRetail/jar/jcl_editor.jar:/usr/local/NCRRetail/jar/xerces.jar:/usr/local/NCRRetail/jar/NCRConfigManager.jar:/usr/local/NCRRetail/jar/NCRSystemMonitor.jar
+PATH=/home/cajero/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/X11R6/bin:/usr/games:/usr/lib/mit/bin:/usr/lib/mit/sbin
+USERNAME=cajero
+LD_LIBRARY_PATH=/usr/java/jdk1.7.0_80/jre/lib/i386/client:/usr/java/jdk1.7.0_80/jre/lib/i386:/home/cajero/workspace/Client/libHuellas/linux-32 bits/
+SHELL=/bin/bash
+DISPLAY=:0.0
+HOSTTYPE=i386
+OSTYPE=linux
+MACHTYPE=i686-suse-linux
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x511b30], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x511b30], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x406570], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: [libjvm.so+0x406570], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGXFSZ: [libjvm.so+0x406570], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x406570], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x407de0], sa_mask[0]=0x00000004, sa_flags=0x10000004
+SIGHUP: [libjvm.so+0x409110], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGINT: [libjvm.so+0x409110], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGTERM: [libjvm.so+0x409110], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGQUIT: [libjvm.so+0x409110], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:SUSE Linux Enterprise Server 11 (i586)
+VERSION = 11
+PATCHLEVEL = 4
+
+uname:Linux 3.0.101-63-pae #1 SMP Tue Jun 23 16:02:31 UTC 2015 (4b89d0c) i686
+libc:glibc 2.11.3 NPTL 2.11.3 
+rlimit: STACK 8192k, CORE 1k, NPROC 7679, NOFILE 8192, AS 2020800k
+load average:0,13 0,20 0,16
+
+/proc/meminfo:
+MemTotal:         991720 kB
+MemFree:          112780 kB
+Buffers:           12928 kB
+Cached:           415552 kB
+SwapCached:          180 kB
+Active:           488160 kB
+Inactive:         340668 kB
+Active(anon):     363120 kB
+Inactive(anon):    65864 kB
+Active(file):     125040 kB
+Inactive(file):   274804 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+HighTotal:        110152 kB
+HighFree:           1464 kB
+LowTotal:         881568 kB
+LowFree:          111316 kB
+SwapTotal:       1534200 kB
+SwapFree:        1533252 kB
+Dirty:               120 kB
+Writeback:             0 kB
+AnonPages:        400268 kB
+Mapped:            81672 kB
+Shmem:             28568 kB
+Slab:              27620 kB
+SReclaimable:      15460 kB
+SUnreclaim:        12160 kB
+KernelStack:        2536 kB
+PageTables:         3388 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     2030060 kB
+Committed_AS:    1012104 kB
+VmallocTotal:     122880 kB
+VmallocUsed:       19088 kB
+VmallocChunk:     102400 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:    299008 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       10232 kB
+DirectMap2M:      892928 kB
+
+
+CPU:total 1 (1 cores per cpu, 1 threads per core) family 6 model 23 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, tsc
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 23
+model name	: Intel(R) Celeron(R) CPU          900  @ 2.20GHz
+stepping	: 10
+microcode	: 2571
+cpu MHz		: 2194.645
+cache size	: 1024 KB
+fdiv_bug	: no
+hlt_bug		: no
+f00f_bug	: no
+coma_bug	: no
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss tm pbe nx lm constant_tsc up arch_perfmon pebs bts aperfmperf pni dtes64 monitor ds_cpl tm2 ssse3 cx16 xtpr pdcm xsave lahf_lm dtherm
+bogomips	: 4389.29
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 991720k(112780k free), swap 1534200k(1533252k free)
+
+vm_info: Java HotSpot(TM) Client VM (24.80-b11) for linux-x86 JRE (1.7.0_80-b15), built on Apr 10 2015 12:41:05 by "java_re" with gcc 4.3.0 20080428 (Red Hat 4.3.0-8)
+
+time: Thu Sep 15 07:33:33 2016
+elapsed time: 265 seconds
+

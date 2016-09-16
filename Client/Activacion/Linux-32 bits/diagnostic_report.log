@@ -1,0 +1,509 @@
+================================= Diagnostic report (Trial) =================================
+Time: jue sep 15 06:13:53 PYT 2016
+
+============ Linux info =============================================================
+-------------------------------------------------------------------------------------
+Uname:
+Linux linux-marcelo 3.0.101-63-pae #1 SMP Tue Jun 23 16:02:31 UTC 2015 (4b89d0c) i686 i686 i386 GNU/Linux
+
+-------------------------------------------------------------------------------------
+Linux distribution:
+/etc/lsb-release: LSB_VERSION="core-2.0-noarch:core-3.2-noarch:core-4.0-noarch:core-2.0-ia32:core-3.2-ia32:core-4.0-ia32"
+/etc/os-release: NAME="SLES"
+VERSION="11.4"
+VERSION_ID="11.4"
+PRETTY_NAME="SUSE Linux Enterprise Server 11 SP4"
+ID="sles"
+ANSI_COLOR="0;32"
+CPE_NAME="cpe:/o:suse:sles:11:4"
+/etc/slepos-release: SUSE Linux Enterprise Point of Service 11.3 (i586)
+VERSION = 11
+PATCHLEVEL = 3
+/etc/SuSE-release: SUSE Linux Enterprise Server 11 (i586)
+VERSION = 11
+PATCHLEVEL = 4
+
+-------------------------------------------------------------------------------------
+Pre-login message:
+/etc/issue:
+
+Welcome to SUSE Linux Enterprise Server 11 SP4  (i586) - Kernel \r (\l).
+
+-------------------------------------------------------------------------------------
+Linux kernel headers version:
+/usr/include/linux/version.h:
+#ifdef __KERNEL__
+#error "======================================================="
+#error "You should not include /usr/include/{linux,asm}/ header"
+#error "files directly for the compilation of kernel modules."
+#error ""
+#error "glibc now uses kernel header files from a well-defined"
+#error "working kernel version (as recommended by Linus Torvalds)"
+#error "These files are glibc internal and may not match the"
+#error "currently running kernel. They should only be"
+#error "included via other system header files - user space"
+#error "programs should not directly include <linux/*.h> or"
+#error "<asm/*.h> as well."
+#error ""
+#error "To build kernel modules please do the following:"
+#error ""
+#error " o Have the kernel sources installed"
+#error ""
+#error " o Make sure that the symbolic link"
+#error "   /lib/modules/`uname -r`/build exists and points to"
+#error "   the matching kernel source directory"
+#error ""
+#error " o When compiling, make sure to use the following"
+#error "   compiler option to use the correct include files:"
+#error ""
+#error "   -I/lib/modules/`uname -r`/build/include"
+#error ""
+#error "   instead of"
+#error ""
+#error "   -I/usr/include/linux"
+#error ""
+#error "   Please adjust the Makefile accordingly."
+#error "======================================================="
+#else
+#define LINUX_VERSION_CODE 196608
+#define KERNEL_VERSION(a,b,c) (((a) << 16) + ((b) << 8) + (c))
+#endif
+
+-------------------------------------------------------------------------------------
+Linux kernel modules:
+bluetooth 214758 0 - Live 0xf8347000
+rfkill 20926 1 bluetooth, Live 0xf7ebf000
+crc16 12595 1 bluetooth, Live 0xf7b29000
+snd_pcm_oss 53162 0 - Live 0xf8201000
+snd_mixer_oss 22095 1 snd_pcm_oss, Live 0xf7fce000
+snd_seq 59526 0 - Live 0xf7fda000
+snd_seq_device 14130 1 snd_seq, Live 0xf7bea000
+uinput 17353 0 - Live 0xf7e96000
+edd 14136 0 - Live 0xf7e44000
+mperf 12603 0 - Live 0xf7ba1000
+mod_usbdpfp 39510 2 - Live 0xf7e8b000 (N)
+microcode 22738 0 - Live 0xf7bf5000
+binfmt_misc 13193 1 - Live 0xf7abd000
+fuse 85777 3 - Live 0xf7ea9000
+loop 22836 0 - Live 0xf7d77000
+dm_mod 79988 0 - Live 0xf821e000
+joydev 17337 0 - Live 0xf7b7a000
+usbhid 47082 0 - Live 0xf7e9c000
+hid 85796 1 usbhid, Live 0xf7e1b000
+pcspkr 12614 0 - Live 0xf7b24000
+snd_hda_codec_hdmi 35908 1 - Live 0xf7e01000
+snd_hda_codec_realtek 68038 1 - Live 0xf7e32000
+ipv6 12662 1 - Live 0xf7b31000
+ipv6_lib 294634 25 ipv6, Live 0xf7c09000
+snd_hda_intel 36990 2 - Live 0xf7bfe000
+rtc_cmos 18109 0 - Live 0xf7be4000
+sg 35832 0 - Live 0xf7b36000
+serio_raw 13024 0 - Live 0xf7adc000
+snd_hda_codec 123962 3 snd_hda_codec_hdmi,snd_hda_codec_realtek,snd_hda_intel, Live 0xf7b5a000
+snd_hwdep 13272 1 snd_hda_codec, Live 0xf7a91000
+e1000e 229620 0 - Live 0xf7baa000
+snd_pcm 92524 4 snd_pcm_oss,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec, Live 0xf7b42000
+i2c_i801 17624 0 - Live 0xf7ab7000
+ptp 18156 1 e1000e, Live 0xf7ae3000
+pps_core 18264 1 ptp, Live 0xf7ac9000
+snd_timer 28707 2 snd_seq,snd_pcm, Live 0xf7ad3000
+snd 66685 15 snd_pcm_oss,snd_mixer_oss,snd_seq,snd_seq_device,snd_hda_codec_hdmi,snd_hda_codec_realtek,snd_hda_intel,snd_hda_codec,snd_hwdep,snd_pcm,snd_timer, Live 0xf7b12000
+iTCO_wdt 21811 0 - Live 0xf7ac2000
+soundcore 14556 1 snd, Live 0xf7a9b000
+iTCO_vendor_support 13502 1 iTCO_wdt, Live 0xf7a8c000
+snd_page_alloc 14230 2 snd_hda_intel,snd_pcm, Live 0xf7a96000
+ext3 144704 1 - Live 0xf7aed000
+jbd 72556 1 ext3, Live 0xf7aa4000
+mbcache 14398 1 ext3, Live 0xf7a84000
+i915 580986 2 - Live 0xf82b8000
+drm_kms_helper 43090 1 i915, Live 0xf7e0f000
+drm 245665 3 i915,drm_kms_helper, Live 0xf7e4e000
+i2c_algo_bit 13269 1 i915, Live 0xf7d3c000
+i2c_core 33944 5 i2c_i801,i915,drm_kms_helper,drm,i2c_algo_bit, Live 0xf7d4f000
+uhci_hcd 31410 0 - Live 0xf7d5a000
+video 18963 1 i915, Live 0xf7d49000
+ehci_hcd 55542 0 - Live 0xf7d68000
+sd_mod 44476 3 - Live 0xf7d24000
+crc_t10dif 12507 1 sd_mod, Live 0xf7d17000
+button 13627 1 i915, Live 0xf7d1c000
+processor 38988 1 - Live 0xf7d31000
+thermal_sys 19862 2 video,processor, Live 0xf7d06000
+hwmon 12936 1 thermal_sys, Live 0xf7d0d000
+intel_agp 13914 1 i915, Live 0xf7c95000
+intel_gtt 19193 3 i915,intel_agp, Live 0xf7c56000
+usbcore 200096 6 mod_usbdpfp,usbhid,uhci_hcd,ehci_hcd, Live 0xf7c63000
+usb_common 12525 1 usbcore, Live 0xf7a7a000
+scsi_dh_alua 17238 0 - Live 0xf7c5d000
+scsi_dh_hp_sw 12700 0 - Live 0xf7a3f000
+scsi_dh_emc 12954 0 - Live 0xf7a75000
+scsi_dh_rdac 17185 0 - Live 0xf7a39000
+scsi_dh 14376 4 scsi_dh_alua,scsi_dh_hp_sw,scsi_dh_emc,scsi_dh_rdac, Live 0xf7a31000
+ahci 25647 2 - Live 0xf7a22000
+libahci 29822 1 ahci, Live 0xf7a46000
+libata 205100 2 ahci,libahci, Live 0xf7ccd000
+scsi_mod 199736 8 sg,sd_mod,scsi_dh_alua,scsi_dh_hp_sw,scsi_dh_emc,scsi_dh_rdac,scsi_dh,libata, Live 0xf7c9b000
+
+-------------------------------------------------------------------------------------
+File systems supported by Linux kernel:
+nodev	sysfs
+nodev	rootfs
+nodev	bdev
+nodev	proc
+nodev	cgroup
+nodev	cpuset
+nodev	tmpfs
+nodev	devtmpfs
+nodev	debugfs
+nodev	securityfs
+nodev	sockfs
+nodev	pipefs
+nodev	anon_inodefs
+nodev	devpts
+nodev	ramfs
+nodev	hugetlbfs
+	iso9660
+nodev	pstore
+nodev	mqueue
+nodev	usbfs
+	ext3
+nodev	fuse
+	fuseblk
+nodev	fusectl
+nodev	binfmt_misc
+
+-------------------------------------------------------------------------------------
+Enviroment variables
+LESSKEY=/etc/lesskey.bin
+MANPATH=/usr/local/man:/usr/local/share/man:/usr/share/man
+NNTPSERVER=news
+ORBIT_SOCKETDIR=/tmp/orbit-cajero
+INFODIR=/usr/local/info:/usr/share/info:/usr/info
+SSH_AGENT_PID=3449
+HOSTNAME=linux-marcelo
+XKEYSYMDB=/usr/share/X11/XKeysymDB
+SHELL=/bin/bash
+HOST=linux-marcelo
+TERM=xterm
+HISTSIZE=1000
+PROFILEREAD=true
+XDG_SESSION_COOKIE=3cc1a34817af707b2b48a2cc56c5896d-1473929820.635842-1650899430
+TMPDIR=/tmp
+GTK_RC_FILES=/etc/gtk/gtkrc:/home/cajero/.gtkrc-1.2-gnome2
+WINDOWID=41943044
+MORE=-sl
+XSESSION_IS_UP=yes
+USER=cajero
+LS_COLORS=no=00:fi=00:di=01;34:ln=00;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=41;33;01:ex=00;32:*.cmd=00;32:*.exe=01;32:*.com=01;32:*.bat=01;32:*.btm=01;32:*.dll=01;32:*.tar=00;31:*.tbz=00;31:*.tgz=00;31:*.rpm=00;31:*.deb=00;31:*.arj=00;31:*.taz=00;31:*.lzh=00;31:*.lzma=00;31:*.zip=00;31:*.zoo=00;31:*.z=00;31:*.Z=00;31:*.gz=00;31:*.bz2=00;31:*.tb2=00;31:*.tz2=00;31:*.tbz2=00;31:*.avi=01;35:*.bmp=01;35:*.fli=01;35:*.gif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mng=01;35:*.mov=01;35:*.mpg=01;35:*.pcx=01;35:*.pbm=01;35:*.pgm=01;35:*.png=01;35:*.ppm=01;35:*.tga=01;35:*.tif=01;35:*.xbm=01;35:*.xpm=01;35:*.dl=01;35:*.gl=01;35:*.wmv=01;35:*.aiff=00;32:*.au=00;32:*.mid=00;32:*.mp3=00;32:*.ogg=00;32:*.voc=00;32:*.wav=00;32:
+LD_LIBRARY_PATH=/home/cajero/workspace/Client/libHuellas/linux-32 bits/
+XNLSPATH=/usr/share/X11/nls
+ENV=/etc/bash.bashrc
+HOSTTYPE=i386
+SSH_AUTH_SOCK=/tmp/keyring-Rvt3gt/socket.ssh
+GNOME_KEYRING_SOCKET=/tmp/keyring-Rvt3gt/socket
+USERNAME=cajero
+SESSION_MANAGER=local/linux-marcelo:@/tmp/.ICE-unix/3330,unix/linux-marcelo:/tmp/.ICE-unix/3330
+FROM_HEADER=
+PAGER=less
+CSHEDIT=emacs
+XDG_CONFIG_DIRS=/etc/xdg
+MINICOM=-c on
+PATH=/home/cajero/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/X11R6/bin:/usr/games:/usr/lib/mit/bin:/usr/lib/mit/sbin
+DESKTOP_SESSION=gnome
+MAIL=/var/spool/mail/cajero
+CPU=i686
+QT_IM_MODULE=xim
+INPUTRC=/home/cajero/.inputrc
+PWD=/home/cajero/workspace/Client/Activacion/Linux-32 bits
+XMODIFIERS=@im=local
+GDM_KEYBOARD_LAYOUT=es
+LANG=es_ES.UTF-8
+GDM_LANG=es_ES.UTF-8
+PYTHONSTARTUP=/etc/pythonstart
+GDMSESSION=gnome
+SSH_ASKPASS=/usr/lib/ssh/x11-ssh-askpass
+ICEAUTHORITY=/home/cajero/.ICEauthority
+QT_SYSTEM_DIR=/usr/share/desktop-data
+HOME=/home/cajero
+SHLVL=2
+SDL_AUDIODRIVER=pulse
+LESS_ADVANCED_PREPROCESSOR=no
+ALSA_CONFIG_PATH=/etc/alsa-pulse.conf
+OSTYPE=linux
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+XCURSOR_THEME=DMZ
+LS_OPTIONS=-N --color=tty -T 0
+WINDOWMANAGER=/usr/bin/gnome
+_NCR_RUN_ONCE=true
+LESS=-M -I
+LOGNAME=cajero
+G_FILENAME_ENCODING=@locale,UTF-8,ISO-8859-15,CP1252
+MACHTYPE=i686-suse-linux
+XDG_DATA_DIRS=/usr/share:/etc/opt/kde3/share:/opt/kde3/share
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-pBPB3VpdKa,guid=68c6ee43e46d11e80110fac757da625d
+CLASSPATH=:/usr/local/NCRRetail:/usr/local/NCRRetail/jar/NCRRetailCommon.jar:/usr/local/NCRRetail/jar/jpos.jar:/usr/local/NCRRetail/jar/NCRJavaPOS.jar:/usr/local/NCRRetail/jar/jcl_editor.jar:/usr/local/NCRRetail/jar/xerces.jar:/usr/local/NCRRetail/jar/NCRConfigManager.jar:/usr/local/NCRRetail/jar/NCRSystemMonitor.jar
+LESSOPEN=lessopen.sh %s
+INFOPATH=/usr/local/info:/usr/share/info:/usr/info
+DISPLAY=:0.0
+XAUTHLOCALHOSTNAME=localhost
+GTK_IM_MODULE=cedilla
+LESSCLOSE=lessclose.sh %s %s
+QT_IM_SWITCHER=imsw-multi
+G_BROKEN_FILENAMES=1
+XAUTHORITY=/var/run/gdm/auth-for-cajero-brNIKS/database
+COLORTERM=gnome-terminal
+_=/usr/bin/env
+
+-------------------------------------------------------------------------------------
+GNU gcc version:
+gcc (SUSE Linux) 4.3.4 [gcc-4_3-branch revision 152973]
+Copyright (C) 2008 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+Using built-in specs.
+Target: i586-suse-linux
+Configured with: ../configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --libdir=/usr/lib --libexecdir=/usr/lib --enable-languages=c,c++,objc,fortran,obj-c++,java,ada --enable-checking=release --with-gxx-include-dir=/usr/include/c++/4.3 --enable-ssp --disable-libssp --with-bugurl=http://bugs.opensuse.org/ --with-pkgversion='SUSE Linux' --disable-libgcj --disable-libmudflap --with-slibdir=/lib --with-system-zlib --enable-__cxa_atexit --enable-libstdcxx-allocator=new --disable-libstdcxx-pch --enable-version-specific-runtime-libs --program-suffix=-4.3 --enable-linux-futex --without-system-libunwind --with-cpu=generic --build=i586-suse-linux
+Thread model: posix
+gcc version 4.3.4 [gcc-4_3-branch revision 152973] (SUSE Linux) 
+
+-------------------------------------------------------------------------------------
+GNU glibc version: 2.11.3 stable
+
+-------------------------------------------------------------------------------------
+GNU glibc++ version:
+
+-------------------------------------------------------------------------------------
+libusb version: diagnostic_report.sh: line 248: libusb-config: command not found
+
+-------------------------------------------------------------------------------------
+libudev version: 
+
+-------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------
+QtCore version: Package QtCore was not found in the pkg-config search path.
+Perhaps you should add the directory containing `QtCore.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'QtCore' found
+qmake version: diagnostic_report.sh: line 279: qmake: command not found
+
+=====================================================================================
+
+============ Harware info ===========================================================
+-------------------------------------------------------------------------------------
+CPU info:
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 23
+model name	: Intel(R) Celeron(R) CPU          900  @ 2.20GHz
+stepping	: 10
+microcode	: 2571
+cpu MHz		: 2194.643
+cache size	: 1024 KB
+fdiv_bug	: no
+hlt_bug		: no
+f00f_bug	: no
+coma_bug	: no
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss tm pbe nx lm constant_tsc up arch_perfmon pebs bts aperfmperf pni dtes64 monitor ds_cpl tm2 ssse3 cx16 xtpr pdcm xsave lahf_lm dtherm
+bogomips	: 4389.28
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+dmidecode -t processor
+/dev/mem: Permission denied
+# dmidecode 2.9
+
+-------------------------------------------------------------------------------------
+Memory info:
+MemTotal:         991720 kB
+MemFree:           94904 kB
+Buffers:            7136 kB
+Cached:           314392 kB
+SwapCached:        14708 kB
+Active:           406716 kB
+Inactive:         438824 kB
+Active(anon):     266668 kB
+Inactive(anon):   296124 kB
+Active(file):     140048 kB
+Inactive(file):   142700 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+HighTotal:        110152 kB
+HighFree:           1476 kB
+LowTotal:         881568 kB
+LowFree:           93428 kB
+SwapTotal:       1534200 kB
+SwapFree:        1459664 kB
+Dirty:              2332 kB
+Writeback:             0 kB
+AnonPages:        515388 kB
+Mapped:            84268 kB
+Shmem:             38780 kB
+Slab:              26480 kB
+SReclaimable:      12972 kB
+SUnreclaim:        13508 kB
+KernelStack:        2976 kB
+PageTables:         4860 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     2030060 kB
+Committed_AS:    1549472 kB
+VmallocTotal:     122880 kB
+VmallocUsed:       19352 kB
+VmallocChunk:     102692 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:    120832 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       18424 kB
+DirectMap2M:      884736 kB
+
+dmidecode -t 6,16
+/dev/mem: Permission denied
+# dmidecode 2.9
+
+-------------------------------------------------------------------------------------
+HDD info:
+/proc/partitions:
+major minor  #blocks  name
+
+   8        0   58615704 sda
+   8        1    1534207 sda1
+   8        3   10690560 sda3
+   8        4   39248896 sda4
+
+-------------------
+/dev/sda:
+vendor:       ATA     
+model:        KINGSTON SV300S3
+serial:       
+firmware rev: 521A
+
+-------------------------------------------------------------------------------------
+PCI devices:
+lspci: not found
+
+-------------------------------------------------------------------------------------
+USB devices:
+NOTE: usbfs is not mounted
+lsusb:
+Protocol spec without prior Class and Subclass spec at line 17406
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 003 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 004 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 005 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 006 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 007 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 008 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 003 Device 002: ID 07dd:0001  
+Bus 004 Device 002: ID 0404:0336 NCR Corp. 
+Bus 004 Device 003: ID 05ba:000a DigitalPersona, Inc. Fingerprint Reader
+Bus 006 Device 002: ID 046d:c31c Logitech, Inc. Keyboard K120
+Bus 006 Device 003: ID 0461:4d0f Primax Electronics, Ltd HP Optical Mouse
+
+Protocol spec without prior Class and Subclass spec at line 17406
+/:  Bus 08.Port 1: Dev 1, Class=root_hub, Driver=uhci_hcd/2p, 12M
+/:  Bus 07.Port 1: Dev 1, Class=root_hub, Driver=uhci_hcd/2p, 12M
+/:  Bus 06.Port 1: Dev 1, Class=root_hub, Driver=uhci_hcd/2p, 12M
+    |__ Port 1: Dev 2, If 0, Class=HID, Driver=usbhid, 1.5M
+    |__ Port 1: Dev 2, If 1, Class=HID, Driver=usbhid, 1.5M
+    |__ Port 2: Dev 3, If 0, Class=HID, Driver=usbhid, 1.5M
+/:  Bus 05.Port 1: Dev 1, Class=root_hub, Driver=uhci_hcd/2p, 12M
+/:  Bus 04.Port 1: Dev 1, Class=root_hub, Driver=uhci_hcd/2p, 12M
+    |__ Port 1: Dev 2, If 0, Class=HID, Driver=usbhid, 12M
+    |__ Port 1: Dev 2, If 1, Class=HID, Driver=usbhid, 12M
+    |__ Port 2: Dev 3, If 0, Class=vend., Driver=mod_usbdpfp, 12M
+/:  Bus 03.Port 1: Dev 1, Class=root_hub, Driver=uhci_hcd/2p, 12M
+    |__ Port 1: Dev 2, If 0, Class=HID, Driver=usbhid, 1.5M
+/:  Bus 02.Port 1: Dev 1, Class=root_hub, Driver=ehci_hcd/6p, 480M
+/:  Bus 01.Port 1: Dev 1, Class=root_hub, Driver=ehci_hcd/6p, 480M
+
+-------------------------------------------------------------------------------------
+Network info:
+
+--------------------
+Network interfaces:
+eth0      Link encap:Ethernet  HWaddr 30:0E:D5:29:9A:3B  
+          inet addr:192.168.10.105  Bcast:192.168.10.255  Mask:255.255.255.0
+          inet6 addr: fe80::320e:d5ff:fe29:9a3b/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:87802 errors:0 dropped:834 overruns:0 frame:0
+          TX packets:42395 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:107836764 (102.8 Mb)  TX bytes:3678795 (3.5 Mb)
+          Interrupt:20 Memory:febc0000-febe0000 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:93 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:93 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:8524 (8.3 Kb)  TX bytes:8524 (8.3 Kb)
+
+--------------------
+IP routing table:
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         192.168.10.254  0.0.0.0         UG    0      0        0 eth0
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      0        0 lo
+169.254.0.0     0.0.0.0         255.255.0.0     U     0      0        0 eth0
+192.168.10.0    0.0.0.0         255.255.255.0   U     0      0        0 eth0
+
+=====================================================================================
+
+============ SDK info =============================================================
+
+Can't find components' directory
+
+=====================================================================================
+
+============ PGD info ===============================================================
+
+-------------------------------------------------------------------------------------
+PGD is running
+procps:
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root      5854  0.0  0.1  51860  1068 ?        S<sl 06:10   0:00 ./pgd
+PGD was started with superuser privileges. Can't collect information about pgd.
+-------------------------------------------------------------------------------------
+
+=====================================================================================
+
+============ PGD log ================================================================
+
+PGD log file: /tmp/pgd.log
+PGD log:
+2016-09-15 06:10:48 Starting PG (revision: 6.0.137677, mode: single, trial)
+2016-09-15 06:10:48 Linux linux-marcelo 3.0.101-63-pae #1 SMP Tue Jun 23 16:02:31 UTC 2015 (4b89d0c) i686
+2016-09-15 06:10:48 PG started (pid: 5854).
+
+=====================================================================================
+
+============ Trial info =============================================================
+
+Welcome!
+Your IP: 200.85.60.254
+Time: 1473863345
+Stamp: 985E8F02
+
+Time left for trial products:
+Empty list.
+Please start product.
+
+=====================================================================================
+

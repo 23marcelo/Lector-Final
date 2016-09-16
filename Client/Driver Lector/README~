@@ -1,0 +1,3 @@
+Para instalar el driver lector se requieren paquetes adicionales:
+- Kernel-devel
+- El compilador gcc
