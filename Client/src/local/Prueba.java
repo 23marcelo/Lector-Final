@@ -133,10 +133,11 @@ public class Prueba {
 //			System.out.println("TEST NO APROBADO");
 
 		// Lectura
-		if(p.testLeer())
-			System.out.println("TEST APROBADO");
-		else
-			System.out.println("TEST NO APROBADO");
+//		if(p.testLeer())
+//			System.out.println("TEST APROBADO");
+//		else
+//			System.out.println("TEST NO APROBADO");
+
 		
 				
 		System.out.println("**********************************");

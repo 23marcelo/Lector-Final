@@ -30,12 +30,12 @@ public final class Licencias{
 		licenses = new HashMap<String, Boolean>();
 	}
 
-	
-	public boolean obtenerLicencias() throws IOException, TimeoutException{
+
+	public boolean obtenerLicencias() throws IOException, TimeoutException{		
 		
 		// Se crea un Array para las licencias requeridas
-		//requiredLicenses = new ArrayList<String>();		
-		
+		requiredLicenses = new ArrayList<String>();		
+
 		// Se especifican los componentes que requieren licencia en el array
 	    /********************** LICENCIAS **************************/
 			requiredLicenses.add("Biometrics.FingerExtraction");
