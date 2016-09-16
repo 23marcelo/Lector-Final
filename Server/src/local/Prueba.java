@@ -109,7 +109,7 @@ public class Prueba {
 //		
 		
 		// Operacion Identificar
-		p.huellaEntrada = "/home/usuario/Escritorio/huellas/ande_marcelo";
+		p.huellaEntrada = "/home/usuario/Escritorio/huellas/aniz_marcelo";
 		
 		if(p.testIdentificar())
 			System.out.println("TEST APROBADO");

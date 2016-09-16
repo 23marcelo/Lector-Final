@@ -101,8 +101,9 @@ public class Mapeador{
 		// Si el parametro es igual a: "identificar"
 		if ( p.equals(operaciones[2]) ) {
 			try {
-				identifyFinger.setNames(fingers);;
-				identifyFinger.setPath(this.path);;
+				identifyFinger.setNames(fingers);
+				//System.out.println(fingers.get(0));
+				identifyFinger.setPath(this.path);
 				identifyFinger.setSubjectIdentify(subjectIdentify);
 				
 				if( this.lector.getSubject() != null ) {

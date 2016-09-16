@@ -164,7 +164,8 @@ public class InterServerImp implements InterServer {
 			
 			// Se cargan los nombres en la lista "listaHuellas"
 			for (int x = 0; x < ficheros.length; x++) {
-				 //System.out.println(ficheros[x].getName());				
+				 //System.out.println(ficheros[x].getName());
+				listaHuellas.add(ficheros[x].getName());
 			}
 		}
 	}
@@ -318,11 +319,6 @@ public class InterServerImp implements InterServer {
 		 }
 		 
 		 //System.out.println("\nRegistro en variable Mensaje: \n"+servidor.getMensaje());
-
-		 		
-		 
-		 //InterServer seri = servidor; 
-		 //seri.identificarHuella2(null);
 		 
 	}
 }

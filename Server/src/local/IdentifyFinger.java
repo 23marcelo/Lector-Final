@@ -75,6 +75,7 @@ public final class IdentifyFinger {
 		biometricClient = new NBiometricClient();
 
 		enrollTask = biometricClient.createTask(EnumSet.of(NBiometricOperation.ENROLL), null);
+		
 
 		for (int i = 0; i < names.size(); i++) {
 			enrollTask.getSubjects().add(createSubject(path.concat(names.get(i)), String.format("%d", i)));
@@ -133,6 +134,7 @@ public final class IdentifyFinger {
 	private static NSubject createSubject(String fileName, String subjectId) throws IOException {
 		NSubject subject = new NSubject();	
 		subject.setTemplateBuffer(NFile.readAllBytes(fileName));
+		
 		subject.setId(subjectId);	
 
 		return subject;
