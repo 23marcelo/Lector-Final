@@ -111,8 +111,7 @@ public class ClienteImp {
 			this.lector.getSelectedScanner();
 			
 			// Si se encuentra algun lector...
-			if(this.lector.getSelectedScanner() != null){
-				//System.out.println("Lector: "+lector.getSelectedScanner());
+			if(this.lector.getSelectedScanner() != null){				
 				this.mensaje = this.mensaje + "\n" + this.lector.getSelectedScanner().toString();
 				return 0;
 			}

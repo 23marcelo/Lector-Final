@@ -18,6 +18,6 @@
 	<classpathentry kind="lib" path="lib/stax-api.jar"/>
 	<classpathentry kind="lib" path="lib/stax.jar"/>
 	<classpathentry kind="lib" path="lib/xpp3.jar"/>
-	<classpathentry kind="lib" path="/home/cajero/workspace/Client/lib/Client-Side.jar"/>
+	<classpathentry kind="lib" path="/home/cajero/workspace/Lector-Final/Client/lib/Client-Side.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

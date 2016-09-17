@@ -63,11 +63,13 @@ public class ClienteWS {
         
         // Se abre el dispositivo para su uso (comprobacion licencias)
         System.out.println("abrir(): "+clienteLector.abrir());
+        
         //System.out.println(clienteLector.getMensaje());
         
         // Se procede a la lectura de la huella
         System.out.println("Ingrese su huella");
         clienteLector.leerHuella();        
+
        
 
         
@@ -93,15 +95,17 @@ public class ClienteWS {
        // Codigo para realizar una identificacion
       try{
 			System.out.println("Identificacion: "+h.identificarHuella(huella.getTemplateBuffer().toByteArray()));
+
       } catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-      }
-                    
-        System.out.println("Cierre: "+clienteLector.cerrar());
-        
-        // Se imprime el historial de los mensajes de las operaciones
-        //System.out.println("\nResgistro variable Mensaje: \n"+clienteLector.getMensaje());
+      }                                  
+
+      System.out.println("Cierre(): "+clienteLector.cerrar());
+      
+      // Se imprime el historial de los mensajes de las operaciones
+      //System.out.println("\nResgistro variable Mensaje: \n"+clienteLector.getMensaje());
+
 
 	}
 }

@@ -1,0 +1,11 @@
+public int guardarHuella(String nombre, NSubject huella)
+Si retorna 0, significa que la huella se guardo correctamente
+Si retorna -1, significa que hay un problema con la ruta o nombre de la huella
+
+
+public String identificarHuella(NSubject huella) throws Exception
+Comparacion 1-N, se compara la huella almacenada en el buffer del lector contra todas las huellas de un directorio. 
+Si retorna -1, significa que aun no se ha leido huella desde el lector
+Si retorna -2, significa que directorio no existe
+
+Observacion: En el fondo el metodo compara con todas las huellas pero solo se retorna la ultima posicion encontrada que hace match.

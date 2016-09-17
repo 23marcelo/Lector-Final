@@ -1,0 +1,53 @@
+Es importante indicar que existe una variable de tipo String llamada "mensaje" en la cual se va registrando el resultado de las operaciones realizadas, la misma es accedida con el metodo getMensaje().
+
+IDENTIFICACION
+
+1- La huella enviada al servidor esta vacia o es de baja calidad (SERVIDOR), lanza excepcion
+La huella a enviar como parametro se debe obtener invocando el metodo ClienteImpType.getSubject(), esta funcion retorna la huella leida desde el lector. Si no se hace esto se obtendra este tipo de excepcion.
+Tambien puede ser por enviar al servidor una huella con baja calidad (BAD_OBJECT).
+
+
+2- Aun no se ha leido huella desde el lector (CLIENTE), lanza excepcion
+Esta excepcion se debe a que no se ha leido la huella desde el lector utilizando la instruccion ClienteImpType.leerHuella().
+
+
+3- La huella es de baja calidad (CLIENTE), se almacena en la variable mensaje
+Esta excepcion se da cuando la huella no se lee correctamente, es posible que se trate de una huella estropeada que es ilegible para el lector.
+
+
+4- Ninguna huella hace match (SERVIDOR), lanza excepcion
+Se puede deber a que no se encuentra ninguna huella que haga match, o por haber posicionado mal el dedo en el lector.
+
+
+5- Directorio no existe (SERVIDOR), lanza excepcion
+Se da cuando el archivo de configuracion posee una ruta no valida (directorio para almacenar las huellas no existe).
+
+
+6- No existe lector (CLIENTE), se almacena en la variable mensaje
+Este mensaje puede mostrarse porque el lector no esta fisicamente conectado o bien porque no se invoco al metodo abrir() antes de realizar alguna operacion.
+
+
+
+GUARDAR HUELLA
+
+1- La huella enviada al servidor esta vacia o es de baja calidad (SERVIDOR), lanza excepcion
+La huella a enviar como parametro se debe obtener invocando el metodo ClienteImpType.getSubject(), esta funcion retorna la huella leida desde el lector. Si no se hace esto se obtendra este tipo de excepcion.
+Tambien puede ser por enviar al servidor una huella con baja calidad (BAD_OBJECT).
+
+
+2- Aun no se ha leido huella desde el lector (CLIENTE), lanza excepcion
+Esta excepcion se debe a que no se ha leido la huella desde el lector utilizando la instruccion ClienteImpType.leerHuella().
+
+
+3- La huella es de baja calidad (CLIENTE), se almacena en la variable mensaje
+Esta excepcion se da cuando la huella no se lee correctamente, es posible que se trate de una huella estropeada que es ilegible para el lector.
+
+
+4- Problema con el nombre con que se guarda o la ruta donde se guarda (CLIENTE), se almacena en la variable mensaje
+Esto puede deberse a un problema con el nombre, con ruta o un problema con directorio en el servidor.
+
+
+5- No existe lector (CLIENTE), se almacena en la variable mensaje
+Este mensaje puede mostrarse porque el lector no esta fisicamente conectado o bien porque no se invoco al metodo abrir() antes de realizar alguna operacion.
+
+

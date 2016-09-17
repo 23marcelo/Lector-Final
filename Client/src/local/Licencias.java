@@ -30,12 +30,12 @@ public final class Licencias{
 		licenses = new HashMap<String, Boolean>();
 	}
 
-	
+
 	public boolean obtenerLicencias() throws IOException, TimeoutException{		
 		
 		// Se crea un Array para las licencias requeridas
 		requiredLicenses = new ArrayList<String>();		
-		
+
 		// Se especifican los componentes que requieren licencia en el array
 	    /********************** LICENCIAS **************************/
 			requiredLicenses.add("Biometrics.FingerExtraction");
@@ -48,17 +48,15 @@ public final class Licencias{
 		
 		for (String license : requiredLicenses) {
 			//System.out.println("Cuando no hay internet se tranca aqui");
-			
 			boolean state = NLicense.obtainComponents(ADDRESS, PORT, license);
-			
 			
 			// Se agrega a la lista; licencia y su estado
 			licenses.put(license, state);
 			
 			if (state) {
-				System.out.println(license + ": obtained");				
+				//System.out.println(license + ": obtained");				
 			}else {
-				System.out.println(license + ": not obtained");
+				//System.out.println(license + ": not obtained");
 				return false;
 			}			
 		}
