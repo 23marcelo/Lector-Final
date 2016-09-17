@@ -90,40 +90,28 @@ public class Prueba {
 		
 		// Obtener Licencias
 //		if(p.testLicencia())
-//			System.out.println("TEST APROBADO");
+//			System.out.println("TEST DE OBTENCION DE LICENCIA APROBADO");
 //		else
-//			System.out.println("TEST NO APROBADO");
+//			System.out.println("TEST DE OBTENCION DE LICENCIA NO APROBADO");
+		
 		
 		// Operacion Guardar
 //		p.huellaEntrada = "/home/usuario/Escritorio/huellas/aniz_marcelo";
-
-//		p.huellaEntrada = "/home/cajero/Desktop/huellas/aniz_marcelo";
-
 //		p.nombreHuella = "fulano";
-//		
+//
 //		if(p.testGuardar())
-//			System.out.println("TEST APROBADO");
+//			System.out.println("TEST GUARDAR APROBADO");
 //		else
-//			System.out.println("TEST NO APROBADO");
-
-//		
+//			System.out.println("TEST GUARDAR NO APROBADO");
+	
 		
 		// Operacion Identificar
-		p.huellaEntrada = "/home/usuario/Escritorio/huellas/aniz_marcelo";
-		
-		if(p.testIdentificar())
-			System.out.println("TEST APROBADO");
-		else
-			System.out.println("TEST NO APROBADO");
-
-		// Operacion Identificar
-//		p.huellaEntrada = "/home/cajero/Desktop/huellas/ande_marcelo";
+//		p.huellaEntrada = "/home/usuario/Escritorio/huellas/aniz_marcelo";
 //		
 //		if(p.testIdentificar())
-//			System.out.println("TEST APROBADO");
+//			System.out.println("TEST IDENTIFICAR APROBADO");
 //		else
-//			System.out.println("TEST NO APROBADO");
-
+//			System.out.println("TEST IDENTIFICAR NO APROBADO");
 	
 	
 		System.out.println("**********************************");
