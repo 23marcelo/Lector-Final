@@ -143,7 +143,9 @@ public class InterServerImp implements InterServer {
 		if(this.mapeador.manejador("guardar")){			
 			mensaje = mensaje + "\n" + "Huella creada en: "+this.getDirectorio()
 					+ " con el nombre "+ nomFinal;
-			return 0;	
+			System.out.println("Huella creada en: "+this.getDirectorio()+ " con el nombre "+ nomFinal);
+			return 0;
+			
 		}
 		else{
 			mensaje = mensaje + "\n" + "Problema con el nombre con "
