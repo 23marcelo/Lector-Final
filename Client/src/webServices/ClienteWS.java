@@ -84,22 +84,22 @@ public class ClienteWS {
         
          
         // Codigo para guardar una huella
-//        try {
-//			h.guardarHuella("fulano", huella.getTemplateBuffer().toByteArray());
-//		} catch (Exception e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+        try {
+			System.out.println("guardar(): "+h.guardarHuella("fulano", huella.getTemplateBuffer().toByteArray()));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
                         
 		
        // Codigo para realizar una identificacion
-      try{
-			System.out.println("Identificacion: "+h.identificarHuella(huella.getTemplateBuffer().toByteArray()));
-
-      } catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-      }                                  
+//      try{
+//			System.out.println("Identificacion: "+h.identificarHuella(huella.getTemplateBuffer().toByteArray()));
+//
+//      } catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//      }                                  
 
       System.out.println("Cierre(): "+clienteLector.cerrar());
       

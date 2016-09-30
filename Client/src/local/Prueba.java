@@ -34,7 +34,7 @@ public class Prueba {
 		
 		abrirRes = interfaz.abrir();
 		
-		System.out.println(abrirRes);
+		//System.out.println(abrirRes);
 		
 		// Si retorna -1 de lanzo una Excepcion Timeout
 		if(abrirRes == -1){
@@ -50,8 +50,9 @@ public class Prueba {
 		int res = interfaz.eco();
 		
 		if (res == 0){
-			if(interfaz.cerrar() == -1)
+			if(interfaz.cerrar() == -1){
 				System.out.println(interfaz.getMensaje());
+			}
 			return true;
 		}
 		else{
@@ -121,22 +122,23 @@ public class Prueba {
 		System.out.println("************** TEST **************");
 		
 		// Inicializar
+		// La prueba inicializa el dispositivo y luego lo cierra.
 //		if(p.testInicializar())
-//			System.out.println("TEST APROBADO");
+//			System.out.println("TEST INICIALIZAR APROBADO");
 //		else
-//			System.out.println("TEST NO APROBADO");
+//			System.out.println("TEST INICIALIZAR NO APROBADO");
 					
 		// Comunicacion 
 //		if(p.testComunicacion())
-//			System.out.println("TEST APROBADO");
+//			System.out.println("TEST DE COMUNICACION APROBADO");
 //		else
-//			System.out.println("TEST NO APROBADO");
+//			System.out.println("TEST DE COMUNICACION NO APROBADO");
 
 		// Lectura
 //		if(p.testLeer())
-//			System.out.println("TEST APROBADO");
+//			System.out.println("TEST DE LECTURA APROBADO");
 //		else
-//			System.out.println("TEST NO APROBADO");
+//			System.out.println("TEST DE LECTURA NO APROBADO");
 
 		
 				
