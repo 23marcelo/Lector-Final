@@ -1,8 +1,12 @@
 Desactivar licencia en el cliente
-To deactivate Fingerprint Extractor license execute:   id_gen -rfpe
+Puede que necesite primero ejecutar el comnado source (Ejemplo: source /etc/profile.d/biometria.sh. En ese archivo esta la variable de entorno LD_LIBRARY_PATH)
+
+To deactivate Fingerprint Extractor license execute:
+sudo ./id_gen -rfpe
 
 Desactivar licencia en el servidor
-To deactivate Fingerprint Matcher license execute:   id_gen -rfpm
+To deactivate Fingerprint Matcher license execute:
+sudo ./id_gen -rfpm 
 
 Lo anterior genrara un archivo que debe ser proporcionado en la pagina de Neurotechnology para realizar finalmente la desactivacion. Fijarse en el final de este documento.
 
